@@ -1,16 +1,16 @@
 {
-  "name": "cazinge.github.io",
+  "name": "jtorre39.github.io",
   "version": "0.0.0",
-  "description": "Eddie Azinge's Website",
+  "description": "Justin Kyle Torres' Website",
   "scripts": {
     "start": "webpack-dev-server -d --inline --host 0.0.0.0 --history-api-fallback --progress",
     "publish": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cazinge/cazinge.github.io"
+    "url": "git+https://github.com/cazinge/jtorre39.github.io"
   },
-  "author": "Eddie Azinge",
+  "author": "Justin Kyle Torres",
   "license": "MIT",
   "dependencies": {
     "react": "^15.4.1",
