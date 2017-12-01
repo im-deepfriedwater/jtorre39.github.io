@@ -5,7 +5,8 @@ function Home() {
     <div className="container">
       <br />
       <div className="row center">
-        <h1>Current Projects:</h1>
+        <h1>Current Projects</h1>
+
       </div>
       <br />
     </div>

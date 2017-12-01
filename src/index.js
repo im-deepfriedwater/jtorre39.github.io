@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './components/App';
 import Home from './components/Home';
+import Maze_Builder from './components/Maze_Builder';
 import PageNotFound from './components/PageNotFound';
 
 
