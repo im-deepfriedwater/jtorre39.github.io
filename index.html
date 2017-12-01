@@ -1,51 +1,101 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Justin Kyle Torres' Website</title>
     <link rel="stylesheet" href="/src/css/materialize.css">
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafrex/spa-github-pages
-      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
-      // ----------------------------------------------------------------------
-      // This script checks to see if a redirect is present in the query string
-      // and converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function(l) {
-        if (l.search) {
-          var q = {};
-          l.search.slice(1).split('&').forEach(function(v) {
-            var a = v.split('=');
-            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
-          });
-          if (q.p !== undefined) {
-            window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + (q.p || '') +
-              (q.q ? ('?' + q.q) : '') +
-              l.hash
-            );
-          }
-        }
-      }(window.location))
+        // Single Page Apps for GitHub Pages
+        // https://github.com/rafrex/spa-github-pages
+        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+        // ----------------------------------------------------------------------
+        // This script checks to see if a redirect is present in the query string
+        // and converts it back into the correct url and adds it to the
+        // browser's history using window.history.replaceState(...),
+        // which won't cause the browser to attempt to load the new url.
+        // When the single page app is loaded further down in this file,
+        // the correct url will be waiting in the browser's history for
+        // the single page app to route accordingly.
+        (function(l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function(v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location))
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
-  </head>
-  <body>
-    <div id="root"></div>
+</head>
 
+<body>
+    <div id="root"></div>
+    <div class="row">
+
+        <div class="col s3 offset-s3">
+            <div class="card large">
+                <div class="card-image">
+                    <a href="external_projects/direct-manipulation-jtorre39/maze_builder.html">
+                         <img src="images/maze_builder.png">
+                         <span class="card-title" style="color: black;">Maze Builder</span>
+                   </a>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Using JavaScript, a touch of jQuery, and a dash of HTML/CSS, Maze Builder
+                        exhibits the use of direct manipulation to allow users to build
+                        their own maze on devices with web browsers that support touch.
+                    </p>
+                </div>
+<!--
+                 <div class="card-action">
+                     <a href="#">Git Me the Repository! (Sorry...)</a>
+                 </div> -->
+            </div>
+        </div>
+
+
+        <div class="col s3" style="height:100%;">
+            <div class="card large">
+                <div class="card-image">
+                    <a href="external_projects/2d-scene-jtorre39/keyframe-tweening-demo.html">
+                         <img src="images/untitled.png">
+                         <span class="card-title" style="color: black;">KeyFrame Tweener</span>
+                   </a>
+                </div>
+                <div class="card-content">
+                    <p>
+                        KeyFrame Tweener is a from-first-principles JavaScript project meant
+                        to create a tool that calculates the in-between frames from a JSON file of key frames.
+                        Demonstrated by my own animation titled, "Emotional Cartharsis", we prefer the art to speak for itself around here.
+                    </p>
+                </div>
+<!--
+                 <div class="card-action">
+                     <a href="#">Show me the Git repository!</a>
+                 </div> -->
+            </div>
+        </div>
+    </div>
+    </div>
     <!-- single page app in bundle.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/src/js/materialize.js"></script>
     <script src="/build/bundle.js"></script>
 
 
-  </body>
+</body>
+
 </html>

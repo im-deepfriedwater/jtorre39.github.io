@@ -1,0 +1,28 @@
+/* Drawing area properties. */
+.drawing-area {
+    cursor: crosshair;
+    position: relative;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+/* ball properties and their variants. */
+.ball {
+    border: thin solid black;
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* Box properties and their variants. */
+.box {
+    border: thin solid black;
+    cursor: move;
+    position: absolute;
+}
+
+.box-highlight {
+    box-shadow: 0px 0px 6px #88F;
+    -moz-box-shadow: 0px 0px 6px #88F;
+    -webkit-box-shadow: 0px 0px 6px #88F;
+}

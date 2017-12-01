@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- The standard viewport metadata setting. -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Direct Manipulation on a Web Page: Physics Version</title>
+    <link rel="stylesheet" type="text/css" href="boxes-with-physics.css"/>
+
+    <!-- Styles that are totally specific to this page. -->
+    <link rel="stylesheet" type="text/css" href="boxes-with-physics-demo.css"/>
+  </head>
+
+  <body>
+    <!-- "Pre-load" the drawing area with a couple of balls.
+         Inline style attributes are OK here since they are
+         manually set when done in code anyway. -->
+    <div id="drawing-area">
+      <div class="ball"
+          style="width: 30px; height: 30px; left: 50px; top: 50px">
+      </div>
+      <div class="ball"
+          style="width: 50px; height: 50px; left: 256px; top: 256px">
+      </div>
+      <div class="ball"
+          style="width: 80px; height: 80px; left: 120px; top: 384px">
+      </div>
+    </div>
+
+
+    <!-- Load up jQuery first. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!-- Load up the controller code. -->
+    <script src="boxes-with-physics.js"></script>
+
+    <!-- Code that is totally specific to this page. -->
+    <script src="boxes-with-physics-demo.js"></script>
+  </body>
+</html>
