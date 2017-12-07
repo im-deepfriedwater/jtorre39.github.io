@@ -1,0 +1,66 @@
+[
+    {
+        "sprite": "snail",
+        "keyframes": [
+            {
+                "frame": 0,
+                "tx": 15,
+                "ty": 600,
+                "sx": 1,
+                "sy": 1,
+                "ease": "quadEaseOut"
+            },
+
+            {
+                "frame": 200,
+                "ty": 600,
+                "sx": 1,
+                "sy": 1
+            },
+
+            {
+                "frame": 400,
+                "ty": 600,
+                "sx": 1,
+                "sy": 1,
+                "ease": "quadEaseOut"
+            }
+        ]
+    },
+
+    {
+        "sprite": "turtle",
+        "keyframes": [
+            {
+                "frame": 0,
+                "tx": 100,
+                "ty": 300,
+                "ease": "quadEaseOut"
+            },
+
+            {
+                "frame": 200,
+                "ty": 300,
+                "ease": "quadEaseOut"
+            },
+
+            {
+                "frame": 150,
+            }
+        ]
+    },
+
+    {
+        "sprite": "trafficLight",
+        "keyframes": [
+            {
+                "frame": 50,
+                "tx": 400,
+                "ty": 40,
+                "sx": 1,
+                "sy": 1,
+                "ease": "linear"
+            }
+        ]
+    }
+]

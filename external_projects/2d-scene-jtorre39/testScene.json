@@ -1,0 +1,333 @@
+[
+    {
+        "sprite": "snail",
+        "keyframes": [
+            {
+                "frame": 0,
+                "tx": 100,
+                "ty": 450,
+                "sx": 14.0,
+                "sy": 14.0,
+                "snailAnimationOffset": 0,
+                "ease": "easeOutSine"
+            },
+            {
+                "frame": 200,
+                "tx": 150,
+                "ty": 450,
+                "sx": 14.0,
+                "sy": 14.0,
+                "snailAnimationOffset": 10,
+                "ease": "easeOutSine"
+
+            },
+
+            {
+                "frame": 250,
+                "tx": 230,
+                "ty": 450,
+                "sx": 14.0,
+                "sy": 14.0,
+                "snailAnimationOffset": 0
+            },
+
+            {
+                "frame": 350,
+                "tx": 255,
+                "ty": 450,
+                "sx": 14.0,
+                "sy": 14.0,
+                "snailAnimationOffset": 7,
+                "ease": "sudden"
+            },
+
+            {
+                "frame": 799,
+                "tx": 200,
+                "ty": 325,
+                "sx": 0,
+                "sy": 0,
+                "ease": "sudden"
+
+            },
+
+            {
+                "frame": 800,
+                "tx": -250,
+                "ty": 480,
+                "sx": 22.0,
+                "sy": 22.0,
+                "snailAnimationOffset": 4,
+                "ease": "quadEaseInAndOut"
+            },
+
+
+            {
+                "frame": 925,
+                "tx": 0,
+                "ty": 480,
+                "sx": 22.0,
+                "sy": 22.0,
+                "snailAnimationOffset": 10,
+                "ease": "sudden"
+            },
+
+            {
+                "frame": 951,
+                "sx": 0,
+                "sy": 0,
+                "ease": "sudden"
+            },
+
+            {
+                "frame": 1001,
+                "tx": 400,
+                "ty": 450,
+                "sx": 0.3,
+                "sy": 0.3,
+                "ease": "easeOutSine"
+            },
+
+
+            {
+                "frame": 1100,
+                "tx": 420,
+                "ty": 450,
+                "sx": 0.3,
+                "sy": 0.3,
+                "ease": "easeOutSine"
+            },
+
+            {
+                "frame": 1200,
+                "tx": 420,
+                "ty": 450,
+                "sx": 0.3,
+                "sy": 0.3,
+                "ease": "easeOutSine"
+            },
+
+            {
+                "frame": 1400,
+                "tx": 440,
+                "ty": 450,
+                "sx": 0.3,
+                "sy": 0.3,
+                "ease": "easeOutSine"
+            },
+
+            {
+                "frame": 1500,
+                "tx": 440,
+                "ty": 450,
+                "sx": 0.3,
+                "sy": 0.3,
+                "ease": "easeOutSine"
+            }
+        ]
+    },
+
+    {
+        "sprite": "turtle",
+        "keyframes": [
+            {
+                "frame": 0,
+                "tx": 350,
+                "ty": 4750,
+                "sx": 80.0,
+                "sy": 80.0,
+                "frontLegsAnimationOffset": 0,
+                "backLegsAnimationOffset": 0,
+                "tailAnimationOffset": 0
+
+            },
+            {
+                "frame": 350,
+                "tx": 350,
+                "ty": 4750,
+                "sx": 80.0,
+                "sy": 80.0,
+                "ease": "sudden"
+
+            },
+
+            {
+                "frame": 351,
+                "tx": -200,
+                "ty": 600,
+                "sx": 13.0,
+                "sy": 13.0,
+                "frontLegsAnimationOffset": 4,
+                "backLegsAnimationOffset": -4,
+                "tailAnimationOffset": 0,
+                "ease": "quadEaseInAndOut"
+
+            },
+
+
+            {
+                "frame": 400,
+                "blink": 1,
+                "ease": "linear"
+            },
+
+
+            {
+                "frame":425,
+                "blink": 0
+            },
+
+            {
+                "frame": 500,
+                "tx": 0,
+                "frontLegsAnimationOffset": 10,
+                "backLegsAnimationOffset": -10,
+                "tailAnimationOffset": 5,
+                "blink": 0
+            },
+
+            {
+                "frame": 700,
+                "tx": 300,
+                "sx": 13.0,
+                "sy": 13.0,
+                "frontLegsAnimationOffset": 0,
+                "backLegsAnimationOffset": -0,
+                "tailAnimationOffset": 10
+            },
+
+            {
+                "frame": 800,
+                "tx": 400,
+                "ty": 600,
+                "sx": 13.0,
+                "sy": 13.0,
+                "frontLegsAnimationOffset": 10,
+                "backLegsAnimationOffset": -10,
+                "tailAnimationOffset": 0,
+                "ease": "sudden"
+            },
+
+            {
+                "frame": 924,
+                "tx": 350,
+                "ty": 4750,
+                "sx": 0,
+                "sy": 0,
+                "ease": "sudden"
+
+            },
+
+            {
+                "frame": 925,
+                "tx": 300,
+                "ty": 500,
+                "sx": 18.0,
+                "sy": 18.0,
+                "frontLegsAnimationOffset": 10,
+                "backLegsAnimationOffset": -10,
+                "tailAnimationOffset": 0,
+                "ease": "easeInCirc"
+            },
+
+            {
+                "frame": 1000,
+                "tx": 300,
+                "ty": 500,
+                "sx": 18.0,
+                "sy": 18.0,
+                "ease": "sudden",
+                "frontLegsAnimationOffset": 0,
+                "backLegsAnimationOffset": 0,
+                "tailAnimationOffset": 10
+            },
+
+            {
+                "frame": 1001,
+                "tx": 400,
+                "ty": 500,
+                "sx": 1.0,
+                "sy": 1.0,
+                "ease": "quadEaseInAndOut",
+                "frontLegsAnimationOffset": 0,
+                "backLegsAnimationOffset": 0,
+                "tailAnimationOffset": 10
+            },
+
+            {
+                "frame": 1100,
+                "tx": 420,
+                "ty": 500,
+                "sx": 1.0,
+                "sy": 1.0,
+                "ease": "quadEaseInAndOut",
+                "frontLegsAnimationOffset": 10,
+                "backLegsAnimationOffset": -10,
+                "tailAnimationOffset": 0
+            },
+
+            {
+                "frame": 1300,
+                "tx": 440,
+                "ty": 500,
+                "sx": 1.0,
+                "sy": 1.0,
+                "frontLegsAnimationOffset": 0,
+                "backLegsAnimationOffset": 0,
+                "tailAnimationOffset": 10,
+                "ease": "linear"
+            },
+
+            {
+                "frame": 1500,
+                "tx": 460,
+                "ty": 500,
+                "sx": 1.0,
+                "sy": 1.0,
+                "frontLegsAnimationOffset": 10,
+                "backLegsAnimationOffset": -10
+            }
+        ]
+    },
+
+    {
+        "sprite": "trafficLight",
+        "keyframes": [
+            {
+                "frame": 1000,
+                "tx": 620,
+                "ty": 425,
+                "sx": 1.0,
+                "sy": 1.0,
+                "lightBottomSwitch": 1,
+                "ease": "linear"
+
+            },
+
+            {
+                "frame": 1200,
+                "tx": 620,
+                "ty": 425,
+                "sx": 1.0,
+                "sy": 1.0,
+                "lightBottomSwitch": 0,
+                "lightTopSwitch": 1
+
+            },
+
+            {
+                "frame": 1500,
+                "tx": 620,
+                "ty": 425,
+                "sx": 1.0,
+                "sy": 1.0,
+                "lightBottomSwitch": 0,
+                "lightTopSwitch": 1
+
+
+            }
+
+        ]
+
+    }
+]

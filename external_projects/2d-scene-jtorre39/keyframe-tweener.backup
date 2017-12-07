@@ -1,0 +1,238 @@
+/*
+ * A simple keyframe-tweening animation module for 2D
+ * canvas elements.
+ */
+
+(() => {
+    // The big one: animation initialization.  The settings parameter
+    // is expected to be a JavaScript object with the following
+    // properties:
+    //
+    // - renderingContext: the 2D canvas rendering context to use
+    // - width: the width of the canvas element
+    // - height: the height of the canvas element
+    // - scene: the array of sprites to animate
+    // - frameRate: number of frames per second (default 24)
+    //
+    // In turn, each sprite is a JavaScript object with the following
+    // properties:
+    //
+    // - draw: the function that draws the sprite
+    // - keyframes: the array of keyframes that the sprite should follow
+    //
+    // Finally, each keyframe is a JavaScript object with the following
+    // properties.  Unlike the other objects, defaults are provided in
+    // case a property is not present:
+    //
+    // - frame: the global animation frame number in which this keyframe
+    //          is to appear
+    // - ease: the easing function to use (default is KeyframeTweener.linear)
+    // - tx, ty: the location of the sprite (default is 0, 0)
+    // - sx, sy: the scale factor of the sprite (default is 1, 1)
+    // - rotate: the rotation angle of the sprite (default is 0)
+    let initializeAnimation = (settings) => {
+        // We need to keep track of the current frame.
+        let currentFrame = 0;
+
+        // Avoid having to go through settings to get to the
+        // rendering context and sprites.
+        let renderingContext = settings.renderingContext;
+        let width = settings.width;
+        let height = settings.height;
+        let scene = settings.scene;
+
+        let processScene = ( () => {
+            for(let i = 0; i < scene.length; i++){
+                let sprite = {
+                    propertyNameArray: [],
+                    propertyFrames: {}
+                }
+
+                for(let j = 0; j < scene[i].keyframes.length; j++){
+                    var properties = Object.keys(scene[i].keyframes[j]);
+                    for(var s in properties){
+                        if(sprite.propertyNameArray.indexOf(properties[s]) === -1){
+                            sprite.propertyNameArray.push(properties[s]);
+                        }
+                    }
+                }
+
+                for(let j = 0; j < sprite.propertyNameArray.length; j++){
+                    let propertyName = sprite.propertyNameArray[j];
+                    sprite.propertyFrames[propertyName] = [];
+                    for(let k = 0; k < scene[i].keyframes.length; k++){
+                        if (scene[i].keyframes[k][propertyName]) {
+                            let propertyData = {frame: scene[i].keyframes[k].frame, value: scene[i].keyframes[k][propertyName]};
+                            sprite.propertyFrames[propertyName].push(propertyData);
+                        }
+                    }
+                }
+
+                sceneData.push(sprite);
+                console.log(sprite.propertyFrames["tx"]);
+            }
+        });
+
+        let sceneData = [];
+        processScene();
+
+        let getNextKeyframe = (sprite, frameNumber, propertyName, isValue) => {
+            if (!sprite.propertyFrames[propertyName]) return undefined;
+            for(let i = 0; i < sprite.propertyFrames[propertyName].length; i++){
+                if(sprite.propertyFrames[propertyName][i].frame > frameNumber){
+                   return isValue ? sprite.propertyFrames[propertyName][i].value : sprite.propertyFrames[propertyName][i].frame;
+                }
+            }
+            return undefined;
+        }
+
+        let getPreviousKeyframe = (sprite, frameNumber, propertyName, isValue) => {
+            if (!sprite.propertyFrames[propertyName]) return undefined;
+            for(let i = sprite.propertyFrames[propertyName].length-1; i > 0; i--){
+                if(sprite.propertyFrames[propertyName][i].frame <= frameNumber){
+                   return isValue ? sprite.propertyFrames[propertyName][i].value : sprite.propertyFrames[propertyName][i].frame;
+                }
+            }
+            return isValue ? undefined : 0;
+        }
+
+        let previousTimestamp = null;
+        let nextFrame = (timestamp) => {
+            // Bail-out #1: We just started.
+            if (!previousTimestamp) {
+                previousTimestamp = timestamp;
+                window.requestAnimationFrame(nextFrame);
+                return;
+            }
+
+            // Bail-out #2: Too soon.
+            if (timestamp - previousTimestamp < (1000 / (settings.frameRate || 24))) {
+                window.requestAnimationFrame(nextFrame);
+                return;
+            }
+
+            // Clear the canvas.
+            renderingContext.clearRect(0, 0, width, height);
+
+            for(let i = 0; i < scene.length; i++){
+                for(let j = 0, maxJ = scene[i].keyframes.length - 1; j < maxJ; j += 1){
+                    if ((scene[i].keyframes[j].frame <= currentFrame) && (currentFrame <= scene[i].keyframes[j + 1].frame)) {
+                        let startKeyframe = scene[i].keyframes[j];
+                        let endKeyframe = scene[i].keyframes[j + 1];
+
+                        let txNextKeyframe = getNextKeyframe(sceneData[i], currentFrame, "tx", false) || 0;
+                        let txPrevKeyframe = getPreviousKeyframe(sceneData[i], currentFrame, "tx", false) || 0;
+                        txDuration = txNextKeyframe - txPrevKeyframe + 1;
+
+                        renderingContext.save();
+
+                        let ease = KeyframeTweener[startKeyframe.ease || "linear"];
+
+                        let txStart = getPreviousKeyframe(sceneData[i], currentFrame, "tx", true) || 0;
+                        let txDistance = (getNextKeyframe(sceneData[i], currentFrame, "tx", true) || 0) - txStart;
+                        //
+                        let tyStart = getPreviousKeyframe(sceneData[i], currentFrame, "ty", true) || 0;
+                        let tyDistance =  (getNextKeyframe(sceneData[i], currentFrame, "ty", true) || 0) - tyStart
+                        //
+                        // let sxStart = startKeyframe.sx || getPreviousKeyframe(sceneData[i], currentFrame, "sx", true) || 1;
+                        // let sxDistance = (endKeyframe.sx || getNextKeyframe(sceneData[i], currentFrame, "sx", true) || 1) - sxStart;
+                        //
+                        // let syStart = startKeyframe.sy || getPreviousKeyframe(sceneData[i], currentFrame, "sy", true) || 1;
+                        // let syDistance = (endKeyframe.sy || getNextKeyframe(sceneData[i], currentFrame, "sy", true) || 1) - syStart;
+                        //
+                        // let rotateStart = (startKeyframe.rotate || getPreviousKeyframe(sceneData[i], currentFrame, "rotate", true) || 0) * Math.PI / 180;
+                        // let rotateDistance = (endKeyframe.rotate || getNextKeyframe(sceneData[i], currentFrame, "rotate", true) || 0) * Math.PI / 180 - rotateStart;
+
+                        let getCurrentTweenFrame = ((propertyName) => {
+                            return currentFrame - getPreviousKeyframe(sceneData[i], currentFrame, propertyName, false);
+                        });
+
+                        let getDuration = ((propertyName) => {
+                            let nextKeyFrame =  getNextKeyframe(sceneData[i], currentFrame, propertyName, false);
+                            let previousKeyFrame  = getPreviousKeyframe(sceneData[i], currentFrame, propertyName, false) || 0;
+
+                            return nextKeyFrame - previousKeyFrame + 1;
+                        });
+
+                        let currentTweenFrame = currentFrame - startKeyframe.frame;
+                        let duration = endKeyframe.frame - startKeyframe.frame + 1;
+
+                      //  console.log(sxStart,sxDistance);
+                    //    console.log("current:"+currentFrame, "startKeyframe:"+getPreviousKeyframe(sceneData[i], currentFrame, "sx", false));
+                  //      console.log("sx: " + (getCurrentTweenFrame("sx"), sxStart, sxDistance, getDuration("sx")) + " frame: " + getCurrentTweenFrame("sx") + " duration: " + duration);
+
+                        renderingContext.translate(
+                            ease(getCurrentTweenFrame("tx"), txStart, txDistance, getDuration("tx")),
+                            300
+                        );
+
+                        // renderingContext.rotate(
+                        //     ease(getCurrentTweenFrame("rotate"), rotateStart, rotateDistance, getDuration("rotate"))
+                        // );
+                        // console.log("frame: " + currentFrame);
+
+
+                        //
+                        // renderingContext.scale(
+                        //     ease(getCurrentTweenFrame("sx"), sxStart, sxDistance, getDuration("sx")),
+                        //     ease(getCurrentTweenFrame("sy"), syStart, syDistance, getDuration("sy"))
+                        // );
+
+                        console.log("currentFrame: " + currentFrame + " ease: " + ease(getCurrentTweenFrame("tx"), txStart, txDistance, getDuration("tx")));
+                        console.log("tx previous keyframe " + getPreviousKeyframe(sceneData[i], currentFrame, "tx", false));
+                        console.log("tx next keyframe " + getNextKeyframe(sceneData[i], currentFrame, "tx", false));
+                        console.log("currentTweenFrame " + getCurrentTweenFrame("tx"));
+                        console.log("getDuration " + getDuration("tx"));
+                        let txStartDebug = "txStart: ";
+                        let txDistanceDebug = "txDistance: ";
+                        console.log(txStartDebug, txStart, txDistanceDebug, txDistance);
+                        console.log(" ");
+
+
+                          // Draw the sprite.
+                        SampleSpriteLibrary[scene[i].sprite]({
+                              renderingContext
+                        });
+
+                        // Clean up.
+                        renderingContext.restore();
+                        break;
+                    }
+                }
+            }
+            // Move to the next frame.
+            currentFrame += 1;
+            previousTimestamp = timestamp;
+            window.requestAnimationFrame(nextFrame);
+        };
+
+        window.requestAnimationFrame(nextFrame);
+    };
+
+    window.KeyframeTweener = {
+        // The module comes with a library of common easing functions.
+        linear: (currentTime, start, distance, duration) => {
+            let percentComplete = currentTime / duration;
+            return distance * percentComplete + start;
+        },
+
+        quadEaseIn: (currentTime, start, distance, duration) => {
+            let percentComplete = currentTime / duration;
+            return distance * percentComplete * percentComplete + start;
+        },
+
+        quadEaseOut: (currentTime, start, distance, duration) => {
+            let percentComplete = currentTime / duration;
+            return -distance * percentComplete * (percentComplete - 2) + start;
+        },
+
+        quadEaseInAndOut: (currentTime, start, distance, duration) => {
+            let percentComplete = currentTime / (duration / 2);
+            return (percentComplete < 1) ?
+                    (distance / 2) * percentComplete * percentComplete + start :
+                    (-distance / 2) * ((percentComplete - 1) * (percentComplete - 3) - 1) + start;
+        },
+
+        initialize: initializeAnimation
+    };
+})();
