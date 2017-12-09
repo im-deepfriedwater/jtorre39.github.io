@@ -229,24 +229,41 @@
 
             let bounds = calculateBounds($parent, $parent.offset());
 
+            let boundsCollision = {x: false, y: false};
+            let boxCollision = {x: false, y: false};
+
             let updatedS = {
                 left: s.left + v.x,
                 top: s.top - v.y
             };
 
+            let radius = $element.width() / 2;
+
             if ((updatedS.left <= bounds.left) || (updatedS.left + width > bounds.right)) {
+                boundsCollision.x = true;
                 v.x = -v.x * BOUNCE_REDUCTION_COEFFICIENT;
+
+                if (s.left > bounds.left) {
+                } else if (s.left + $element.width() > bounds.right) {
+                    s.left = bounds.right - $element.width();
+                }
             } else {
                 s.left = updatedS.left;
             }
 
             if ((updatedS.top <= bounds.top) || (updatedS.top + height > bounds.bottom)) {
+                boundsCollision.y = true;
                 v.y = -v.y * BOUNCE_REDUCTION_COEFFICIENT;
+
+                if (s.top < bounds.top) {
+                    s.top = bounds.top;
+                } else if (s.top + $element.width() > bounds.bottom) {
+                    s.top = bounds.bottom - $element.height();
+                }
             } else {
                 s.top = updatedS.top;
             }
 
-            let radius = $element.width() / 2;
 
             // We must find the center x and y.
             let currentCircle = {
@@ -254,11 +271,20 @@
                 y: s.top + radius,
                 r: radius
             };
-
-            updateCollision(v, currentCircle);
+            // console.log(currentCircle, "before");
+            updateCollision(currentCircle, boxCollision);
+            // console.log(currentCircle, "after");
 
             // ...and the final result is sent on a one-way trip to the _view_.
             $(element).offset(s);
+
+            if (boxCollision.x) {
+                s.left = currentCircle.x - currentCircle.r;
+                v.x = -v.x * BOUNCE_REDUCTION_COEFFICIENT;
+            } else if (boxCollision.y) {
+                s.top = currentCircle.y - currentCircle.r;
+                v.y = -v.y * BOUNCE_REDUCTION_COEFFICIENT;
+            }
 
         });
 
@@ -274,7 +300,7 @@
     // Circle - Rect collision check credit to markE from:
     // https://stackoverflow.com/questions/21089959/detecting-collision-of-rectangle-with-circle
 
-    let updateCollision = (v, circle) => {
+    let updateCollision = (circle, boxCollision) => {
 
         $(".drawing-area .box").each((index, element) => {
             let box = $(element);
@@ -289,10 +315,33 @@
             };
 
             if (collisionHappened(circle, rectangle)) {
-                bounce(v);
+                adjust(circle, rectangle, boxCollision);
             }
         });
     };
+
+    let adjust = (c, r, boxCollision) => {
+        let rightRectBound = r.x + r.w;
+        let bottomRectBound = r.y + r.h;
+
+        // check if right bound collision
+        if (rightRectBound > c.x - c.r && rightRectBound < c.x + c.r ) {
+            c.x = rightRectBound + c.r;
+            boxCollision.x = true;
+        } else if (r.x < c.x + c.r && r.x > c.x - c.r) {
+            c.x = r.x - c.r;
+            boxCollision.x = true;
+        }
+
+        if (r.y < c.y + c.r && r.y > c.y - c.r) {
+            c.y = r.y - c.r;
+            boxCollision.y = true;
+
+        } else if (bottomRectBound > c.y - c.r && bottomRectBound < c.y + c.r) {
+            c.y = bottomRectBound + c.r;
+            boxCollision.y = true;
+        }
+    }
 
     let collisionHappened = (circle, rectangle) => {
         // First we find the distance between the centers.
