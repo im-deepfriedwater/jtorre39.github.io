@@ -1,0 +1,41 @@
+.loading-text {
+   font-family: 'Press Start 2P', cursive;
+   color: white;
+   text-align: center;
+   font-size: 5em;
+
+}
+
+.loading-center-div{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+}
+
+.loading-container {
+    overflow-y: hidden;
+	max-height: 2000px; /* approximate max height */
+    background-color: black;
+
+    /* only transition on transform properties which are hardware accelerated
+    = way better performances */
+
+    /* credit to jkneb
+    http://jsfiddle.net/jkneb/9uRKt/ */
+	-webkit-transition:-webkit-transform .3s ease;
+       -moz-transition:   -moz-transform .3s ease;
+        -ms-transition:    -ms-transform .3s ease;
+
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
