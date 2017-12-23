@@ -1,25 +1,30 @@
 (($) => {
     const $loadingText = $('.loading-text');
-    const $loadingContainer = $('.loading-container');
+    const $loadingContainer = $('.sliding-container');
 
-    let toggleLoading = () => {
-        doneLoading = true;
-        $loadingContainer.css({'max-height': 0})
 
+    let toggleLoading = (options) => {
+        $loadingText.text('');
+        if ($.isPlainObject(options) && $.isFunction(options.whenDoneLoading)) {
+            options.whenDoneLoading();
+        }
     };
 
     const FRAME_RATE = 10;
     const FRAME_DURATION = 5000 / FRAME_RATE
     const MAX_DOTS = 3;
     const LOADING_TEXT = "LOADING ";
+    const MINIUMUM_DURATION = 4000;
 
     let currentDots = 0;
     let doneLoading = false;
+    let currentTime = 0;
+    let userOptions;
     let lastTimestamp;
 
     let animateLoading = (timestamp) => {
-
-        if (doneLoading) {
+        if (doneLoading && currentTime > MINIUMUM_DURATION) {
+            toggleLoading(userOptions);
             return;
         }
 
@@ -27,12 +32,16 @@
             lastTimestamp = timestamp;
         }
 
-        if (timestamp - lastTimestamp < FRAME_DURATION) {
+        let delta = timestamp - lastTimestamp;
+
+        if (delta < FRAME_DURATION) {
             window.requestAnimationFrame(animateLoading);
             return;
         }
 
         let dotsString = "";
+
+        currentTime += delta;
 
         if (currentDots > MAX_DOTS) {
             currentDots = 0;
@@ -52,15 +61,12 @@
     let init = (options) => {
         window.requestAnimationFrame(animateLoading);
 
-        if ($.isPlainObject(options) && $.isFunction(options.whenDoneLoading)) {
-            $(window).bind("load", function() {
-                toggleLoading();
-                options.whenDoneLoading();
-            });
-        }
+        $(window).bind("load", function() {
+            doneLoading = true;
+        });
 
-
-    }
+        userOptions = options;
+    };
 
     window.Loading = {
         init

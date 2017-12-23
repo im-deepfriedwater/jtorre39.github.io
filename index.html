@@ -13,18 +13,29 @@
 </head>
 
 <body>
-    <div class="loading-container">
-        <div class="loading-center-div">
-            <p class="loading-text">
-                Loading
-            </p>
+    <div>
+        <div class="sliding-container">
+            <div class="sliding-center-div">
+                <p class="loading-text">
+                    LOADING
+                </p>
+
+           </div>
+           <div class="intro-container">
+           </div>
         </div>
+
+
+
+
+        <img src="/images/caricature/caricature_pixel_right.png">
     </div>
-    <img src="/images/caricature/caricature_pixel_right.png">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type=text/javascript src="LoadingModule.js"></script>
+    <script type=text/javascript src="IntroModule.js"></script>
+
     <script type=text/javascript>
-        window.Loading.init({whenDoneLoading: function () {console.log('yikes')}});
+        window.Loading.init({whenDoneLoading: function () {window.Intro.init();}});
     </script>
 </body>
 
