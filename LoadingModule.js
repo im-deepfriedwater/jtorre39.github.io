@@ -1,11 +1,10 @@
 (($) => {
     const $loadingText = $('.loading-text');
-
-    $(window).bind("load", function() {
-       // doneLoading = true;
-    });
+    const $loadingContainer = $('.loading-container');
 
     let toggleLoading = () => {
+        doneLoading = true;
+        $loadingContainer.css({'max-height': 0})
 
     };
 
@@ -20,8 +19,12 @@
 
     let animateLoading = (timestamp) => {
 
+        if (doneLoading) {
+            return;
+        }
+
         if (!lastTimestamp) {
-           lastTimestamp = timestamp;
+            lastTimestamp = timestamp;
         }
 
         if (timestamp - lastTimestamp < FRAME_DURATION) {
@@ -46,8 +49,17 @@
         window.requestAnimationFrame(animateLoading);
     };
 
-    let init = () => {
+    let init = (options) => {
         window.requestAnimationFrame(animateLoading);
+
+        if ($.isPlainObject(options) && $.isFunction(options.whenDoneLoading)) {
+            $(window).bind("load", function() {
+                toggleLoading();
+                options.whenDoneLoading();
+            });
+        }
+
+
     }
 
     window.Loading = {
