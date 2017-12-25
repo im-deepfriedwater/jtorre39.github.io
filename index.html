@@ -19,23 +19,27 @@
                 <p class="loading-text">
                     LOADING
                 </p>
-
-           </div>
-           <div class="intro-container">
-           </div>
+            </div>
+            <div class="intro-container">
+                <div class="intro-text-container">
+                </div>
+                <div class="external-link-container">
+                </div>
+            </div>
         </div>
-
-
-
-
         <img src="/images/caricature/caricature_pixel_right.png">
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type=text/javascript src="GameModule.js"></script>
     <script type=text/javascript src="LoadingModule.js"></script>
     <script type=text/javascript src="IntroModule.js"></script>
 
     <script type=text/javascript>
-        window.Loading.init({whenDoneLoading: function () {window.Intro.init();}});
+        window.Loading.init({
+            whenDoneLoading: function() {
+                window.Intro.init({Init: window.Game.Init});
+            }
+        });
     </script>
 </body>
 

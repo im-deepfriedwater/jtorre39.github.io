@@ -1,8 +1,14 @@
 (($) => {
-    const $introContainer = $('.intro-container');
+    const $introContainer = $(".intro-text-container");
+    const $externalContainer = $(".external-link-container");
     const $music = $('.music');
     const $startSound = $('.start-sound');
+
+    const optionClass = "options-text";
     const textClass = 'intro-text';
+    const activeClass ="active-external";
+
+    let userOptions;
 
     const exposition = [
         `You are a fierce yet savvy ace recruiter tasked with finding
@@ -19,42 +25,96 @@
 
     const context = [
         `After days of searching, you feel you've done a sizeable amount of
-        recruiting. Proud of living up to your very own job title as a recruiter,
+        recruiting. Proud of living up to your own job title as a recruiter,
         you decide to look over one more candidate before you call it a day and
-        continue on with your current batch of candidates. `,
+        continue on with your current batch of candidates. `
     ];
+
+    const notices =
+        [`For those strapped on time, you may click the box below to take you
+        to a more traditional portfolio experience. However, it will affect
+        the overall ending. (Just kidding!) To continue on anyway and get
+        the good ending, click anywhere on this paragraph.`];
 
     const options = ['Sound?'];
 
     let settings = {};
 
-    let index = 0;
-
-    const init = () => {
-        formatText($introContainer, exposition);
+    const init = (options) => {
+        formatText(exposition);
         $introContainer.click(expositionClick);
+        userOptions = options;
     };
 
     const expositionClick = () => {
-        formatText($introContainer, context);
+        formatText(context);
+        $introContainer.click(noticesClick);
+    };
+
+    const noticesClick = () => {
+        const portfolioString = "For a more typical website format, click me!";
+        const portfolioText = "portfolio-text";
+        const linkToPortfolio = "/AlternateIndex.html";
+
+        formatText(notices);
         $introContainer.click(optionsClick);
+        $externalContainer.append(
+            $(`<a>${portfolioString}</a>`)
+                .attr("href", linkToPortfolio)
+                .addClass(portfolioText)
+        );
+
+        $externalContainer.addClass(activeClass);
     };
 
     const optionsClick = () => {
-        formatText($introContainer, options);
-        $introContainer.click(() => {console.log('gj');});
-        // TODO set up yes and no options
+        $externalContainer.empty();
+        $externalContainer.removeClass(activeClass);
+
+        formatText(options);
+
+        $externalContainer.append(
+            $("<div>On</div>")
+                .addClass(optionClass)
+                .click(finishIntroOn)
+            ,
+
+            $("<div>Off</div>")
+                .addClass(optionClass)
+                .click(finishIntroOff)
+        );
     };
 
-    const finishIntro = () => {
-        window.Settings = settings;
+    const finishIntroOn = () => {
+        finishIntro(true);
     };
 
-    const formatText = ($element, textArray) => {
-        $element.empty();
+    const finishIntroOff = () => {
+        finishIntro(off);
+    };
+
+    const finishIntro = (value) => {
+        window.Settings = {
+            "sound": value
+        }
+
+        if (value) {
+            //TODO play accept sound
+        }
+
+        $introContainer.empty();
+        $externalContainer.empty();
+        userOptions.Init();
+    };
+
+    const formatText = (textArray) => {
+        let result = "";
+        $introContainer.empty();
         textArray.forEach((text) => {
-            $element.append($(`<p>${text}</p>`).addClass(textClass));
+            result += `<p class=${textClass}>${text}</p>`;
         });
+
+        $introContainer.append(result);
     };
 
     window.Intro = {

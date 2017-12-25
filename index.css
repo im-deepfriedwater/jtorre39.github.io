@@ -45,5 +45,30 @@
     padding-top: 3em;
     width: 80%;
     cursor: pointer;
+}
 
+.active-external {
+    outline: white solid 0.5em;
+}
+
+.portfolio-text {
+    font-family: 'Press Start 2P';
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+.portfolio-text:hover {
+    text-decoration: underline;
+}
+
+.options-text {
+    font-family: 'Press Start 2P';
+    color: white;
+    text-align: center;
+    font-size: 2em;
+};
+
+.options-text:hover {
+    text-decoration: underline;
 }
