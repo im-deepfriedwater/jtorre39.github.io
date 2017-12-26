@@ -99,7 +99,7 @@
         }
 
         if (value) {
-            //TODO play accept sound
+            $("#confirmationNoise").trigger("play");
         }
 
         $introContainer.empty();
