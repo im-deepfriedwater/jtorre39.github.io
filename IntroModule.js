@@ -25,7 +25,7 @@
         `After days of searching, you feel you've done a sizeable amount of
         recruiting. Proud of living up to your own job title as a recruiter,
         you decide to look over one more candidate before you call it a day and
-        bask in another example of your genius work.`
+        revel in a day's worth of your glorious results.`
     ];
 
     const notices =
