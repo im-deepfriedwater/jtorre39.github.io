@@ -1,7 +1,10 @@
 (($) => {
 
     const Init = () => {
-        console.log('wurk');
+        if (window.Settings.sound) {
+            $("#bg").trigger("play");
+            
+        }
     };
 
 
