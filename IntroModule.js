@@ -1,11 +1,9 @@
 (($) => {
     const $introContainer = $(".intro-text-container");
     const $externalContainer = $(".external-link-container");
-    const $music = $('.music');
-    const $startSound = $('.start-sound');
 
     const optionClass = "options-text";
-    const textClass = 'intro-text';
+    const textClass = "intro-text";
     const activeClass ="active-external";
 
     let userOptions;
@@ -99,7 +97,9 @@
         }
 
         if (value) {
-            $("#confirmationNoise").trigger("play");
+            $("#confirmationNoise")
+                .prop("volume", 0.07)
+                .trigger("play");
         }
 
         $introContainer.empty();
