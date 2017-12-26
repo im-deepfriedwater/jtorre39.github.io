@@ -10,7 +10,7 @@
 
     const exposition = [
         `You are a fierce yet savvy ace recruiter tasked with finding
-        yet another young talent to add to your company's workforce.`,
+        but another young talent to add to your company's workforce.`,
 
         `"... Again? I just got that kid who founded like 3 different companies."`,
 
@@ -23,9 +23,11 @@
 
     const context = [
         `After days of searching, you feel you've done a sizeable amount of
-        recruiting. Proud of living up to your own job title as a recruiter,
+        recruiting. Proud of living up to your own title as a recruiter,
         you decide to look over one more candidate before you call it a day and
-        revel in a day's worth of your glorious results.`
+        revel in your talented ability to recruit only the best people.`,
+
+        `* Click to continue! *`
     ];
 
     const notices =
@@ -88,7 +90,7 @@
     };
 
     const finishIntroOff = () => {
-        finishIntro(off);
+        finishIntro(false);
     };
 
     const finishIntro = (value) => {

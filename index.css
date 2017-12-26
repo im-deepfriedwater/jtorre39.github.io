@@ -38,11 +38,21 @@
     font-size: 2em;
 }
 
+@media (max-height:1000px) {
+  .intro-text {
+    font-size: 1.6em;
+  }
+
+  .intro-container {
+      width: 23em;
+  }
+}
+
 .intro-container {
     padding: 5em;
     padding-left: 25em;
     padding-top: 3em;
-    width: 80%;
+    width: 90%;
     cursor: pointer;
 }
 
@@ -54,7 +64,8 @@
     font-family: 'Press Start 2P';
     color: white;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.8em;
+    padding-left: 0.2em;
 }
 
 .portfolio-text:hover {
@@ -70,4 +81,4 @@
 
 .options-text:hover {
     text-decoration: underline;
-}
+};
