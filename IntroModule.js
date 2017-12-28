@@ -4,7 +4,7 @@
 
     const optionClass = "options-text";
     const textClass = "intro-text";
-    const activeClass ="active-external";
+    const activeClass ="active-external lvl1";
 
     let userOptions;
 

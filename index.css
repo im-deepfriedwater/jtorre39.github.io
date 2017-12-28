@@ -1,3 +1,4 @@
+
 .loading-text {
    font-family: 'Press Start 2P';
    color: white;
@@ -8,7 +9,6 @@
 .sliding-center-div{
     position: absolute;
     top: 50%;
-    left: 25%;
     transform: translateY(-50%);
 }
 
@@ -38,7 +38,7 @@
     font-size: 2em;
 }
 
-@media (max-height:1000px) {
+@media only screen and (max-height: 880px) {
   .intro-text {
     font-size: 1.6em;
   }
@@ -48,16 +48,25 @@
   }
 }
 
-.intro-container {
-    padding: 5em;
-    padding-left: 25em;
-    padding-top: 3em;
-    width: 90%;
-    cursor: pointer;
+@media only screen and (max-height: 600px) {
+  .intro-text {
+    font-size: 1.2em;
+  }
+
+  .intro-container {
+      width: 23em;
+  }
 }
 
-.active-external {
-    outline: white solid 0.5em;
+
+.intro-container {
+    padding-left: 10em;
+    padding-right: 10em;
+    padding:bottom: 5em;
+    padding-top: 3em;
+    margin: auto;
+    width: 90%;
+    cursor: pointer;
 }
 
 .portfolio-text {
@@ -77,8 +86,50 @@
     color: white;
     text-align: center;
     font-size: 2em;
-};
+}
 
 .options-text:hover {
     text-decoration: underline;
-};
+}
+
+.active-external {
+    border-width: thin;
+    text-align: center;
+}
+
+.nav-title {
+     font-family: 'Press Start 2P';
+     font-size: 5px;
+     padding: 0px !important;
+     padding-left: 0.5em !important;
+}
+
+.nav-text li a {
+    font-family: "Press Start 2P";
+
+}
+
+.game-container {
+    position: fixed;
+    bottom: 2em;
+}
+
+.topic-container {
+    float: right;
+    padding: 10px;
+    margin-right: 150px !important;
+}
+
+.dialogue-box {
+    width: 70%;
+    height: 150px;
+}
+
+.dialogue-box p {
+    font-family: "Press Start 2P";
+    font-size: 1.7em;
+}
+
+nav {
+    background-color: #FF423F;
+}

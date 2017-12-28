@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+* {
+  box-sizing: border-box; }
+
+/*@mixin step2( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor,
+    2*$width 0 $color,
+    -2*$width 0 $color,
+    0 (-2*$width) $color,
+    0 2*$width $color,
+    $width $width $color,
+    -$width $width $color,
+    $width (-$width) $color,
+    -$width (-$width) $color;
+}*/
+/*@mixin step3( $width, $color, $bgcolor ) {
+  box-shadow:
+    $width 0 $bgcolor,
+    -$width 0 $bgcolor,
+    0 (-$width) $bgcolor,
+    0 $width $bgcolor,
+    2*$width 0 $bgcolor,
+    -2*$width 0 $bgcolor,
+    0 (-2*$width) $bgcolor,
+    0 2*$width $bgcolor,
+    0 0 0 $width $bgcolor,
+    3*$width 0 $color,
+    -3*$width 0 $color,
+    0 3*$width $color,
+    0 (-3*$width) $color,
+    -2*$width (-$width) $color,
+    -$width (-2*$width) $color,
+    $width (-2*$width) $color,
+    2*$width (-$width) $color,
+    2*$width $width $color,
+    $width 2*$width $color,
+    -$width 2*$width $color,
+    -2*$width $width $color;
+}*/
+.lvl1 {
+  box-shadow: 8px 0 white, -8px 0 white, 0 -8px white, 0 8px white, 2px 0 0 4px white, -2px 0 0 4px white, 0 -2px 0 4px white, 0 2px 0 4px white, 10px 0 black, -10px 0 black, 0 -10px black, 0 10px black, 0 0 0 6px black, 0 4px 0 4px black, 0 -4px 0 4px black, 4px 0 0 4px black, -4px 0 0 4px black;
+  margin: 10px auto; }
+
+.lvl2 {
+  box-shadow: 4px 0 white, -4px 0 white, 0 -4px white, 0 4px white, 8px 0 blue, -8px 0 blue, 0 -8px blue, 0 8px blue, 0 0 0 4px blue;
+  margin: 8px auto; }
+
+.lvl3 {
+  box-shadow: 3px 0 white, -3px 0 white, 0 -3px white, 0 3px white, 6px 0 white, -6px 0 white, 0 -6px white, 0 6px white, 0 0 0 3px white, 9px 0 red, -9px 0 red, 0 9px red, 0 -9px red, 0 -3px 0 3px red, 0 3px 0 3px red, 3px 0 0 3px red, -3px 0 0 3px red;
+  margin: 9px auto; }
+
+.lvl4 {
+  box-shadow: 5px 0 white, -5px 0 white, 0 -5px white, 0 5px white, 10px 0 white, -10px 0 white, 0 -10px white, 0 10px white, 0 0 0 5px white, 15px 0 white, -15px 0 white, 0 15px white, 0 -15px white, 0 -5px 0 5px white, 0 5px 0 5px white, 5px 0 0 5px white, -5px 0 0 5px white, 20px 0 green, -20px 0 green, 0 -20px green, 0 20px green, 10px 0 0 5px green, -10px 0 0 5px green, 0 10px 0 5px green, 0 -10px 0 5px green, 0 0 0 10px green;
+  margin: 20px auto; }
+
+.other {
+  box-shadow: 6px 0 black, -6px 0 black, 0 -6px black, 0 6px black;
+  margin: 6px auto; }
+
+.dialogue-border {
+  box-shadow: 32px 0 white, -32px 0 white, 0 -32px white, 0 32px white, 8px 0 0 16px white, -8px 0 0 16px white, 0 -8px 0 16px white, 0 8px 0 16px white, 40px 0 black, -40px 0 black, 0 -40px black, 0 40px black, 0 0 0 24px black, 0 16px 0 16px black, 0 -16px 0 16px black, 16px 0 0 16px black, -16px 0 0 16px black;
+  margin: 40px auto; }
+
+.topic-box {
+  box-shadow: 6px 0 black, -6px 0 black, 0 -6px black, 0 6px black;
+  margin: 6px auto; }
+
+/*# sourceMappingURL=8-bit-border.css.map */

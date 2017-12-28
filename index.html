@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/src/css/materialize.css">
     <link rel="stylesheet" href="/site.css">
     <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="src/css/8-Bit-Border.css">
+
 
 </head>
 
@@ -27,9 +29,34 @@
                 </div>
             </div>
         </div>
-        
-        <img src="/images/caricature/caricature_pixel_right.png">
-        <div class="dialogue-container">
+
+
+        <nav>
+            <div class="nav-wrapper">
+                <div class="brand-logo nav-title">Justin Kyle Torres</div>
+                <ul id="nav-mobile" class="right hide-on-med-and-down nav-text">
+                    <li><a href="sass.html">LinkedIn</a></li>
+                    <li><a href="badges.html">Github</a></li>
+                    <li><a href="collapsible.html">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="game-container">
+            <img src="/images/caricature/caricature_pixel_right.png">
+            <div class="topic-container topic-box">
+                <p> hoi </p>
+            </div>
+            <div class="dialogue-container">
+                <div class="dialogue-border dialogue-box">
+                    <p class="speaker">
+                        Speaker:
+                    </p>
+                    <p class="dialogue-text">
+                        This is a test. Little did you know
+                        it already started several minutes ago.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <audio id="bg">
@@ -51,7 +78,9 @@
     <script type=text/javascript>
         window.Loading.init({
             whenDoneLoading: function() {
-                window.Intro.init({Init: window.Game.Init});
+                window.Intro.init({
+                    Init: window.Game.Init
+                });
             }
         });
     </script>
