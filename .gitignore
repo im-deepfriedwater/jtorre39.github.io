@@ -6,3 +6,5 @@ node_modules
 
 # Files marked with gitigx
 *gitigx*
+
+src/.sass-cache

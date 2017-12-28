@@ -24,7 +24,7 @@ nav * {
      user-select: none; /* Non-prefixed version */
 }
 
-.sliding-center-div{
+.sliding-center-div {
     position: absolute;
     top: 50%;
     left: 25%;
