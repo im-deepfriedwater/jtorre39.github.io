@@ -74,13 +74,11 @@
         formatText(options);
 
         $externalContainer.append(
-            $("<div>On</div>")
-                .addClass(optionClass)
+            $(`<div class="${optionClass} no-select">On</div>`)
                 .click(finishIntroOn)
             ,
 
-            $("<div>Off</div>")
-                .addClass(optionClass)
+            $(`<div class="${optionClass} no-select">Off</div>`)
                 .click(finishIntroOff)
         );
     };
@@ -113,7 +111,7 @@
         let result = "";
         $introContainer.empty();
         textArray.forEach((text) => {
-            result += `<p class=${textClass}>${text}</p>`;
+            result += `<p class="${textClass} no-select">${text}</p>`;
         });
 
         $introContainer.append(result);

@@ -6,9 +6,28 @@
    font-size: 5em;
 }
 
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+     user-select: none; /* Non-prefixed version */
+}
+
+nav * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+     user-select: none; /* Non-prefixed version */
+}
+
 .sliding-center-div{
     position: absolute;
     top: 50%;
+    left: 25%;
     transform: translateY(-50%);
 }
 
@@ -111,23 +130,38 @@
 
 .game-container {
     position: fixed;
-    bottom: 2em;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    height: 90%;
+    width: 100%;
+}
+
+.portrait {
+    margin-left: 6vw;
+    margin-bottom: 1vh;
 }
 
 .topic-container {
     float: right;
-    padding: 10px;
-    margin-right: 150px !important;
+    padding: 1em;
+    margin-right: 15vw !important;
+    width: 50vw;
+    height: 32vh;
+}
+
+.topic-box p {
+    font-family: "Press Start 2P";
+
 }
 
 .dialogue-box {
     width: 70%;
-    height: 150px;
+    height: 23vh;
 }
 
 .dialogue-box p {
     font-family: "Press Start 2P";
-    font-size: 1.7em;
+    font-size: 3vh;
 }
 
 nav {
