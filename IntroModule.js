@@ -16,14 +16,16 @@
 
         `"Yes again. We have a deadline to meet and could use the extra help. Chop chop."`,
 
-        `They'll never understand.`,
+        "They'll never understand.",
 
-        `* Click to continue! *`
+        "* Click to continue! *"
     ];
 
     const context = [
         `After days of searching, you feel you've done a sizeable amount of
-        recruiting. Proud of living up to your own title as a recruiter,
+        recruiting.`,
+
+        `Proud of living up to your own title as a recruiter,
         you decide to look over one more candidate before you call it a day and
         revel in your talented ability to recruit only the best people.`,
 

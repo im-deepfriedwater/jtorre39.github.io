@@ -1,0 +1,49 @@
+
+.game-container {
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    height: auto;
+    width: 100%;
+ }
+
+.portrait {
+    /* margin-left: 6vw; */
+    /* margin-bottom: 1vh; */
+}
+
+.portrait-container {
+    margin-top: 10vh;
+    margin-left: 6vw;
+    margin-bottom: 3vh;
+    height: 40vh;
+    display: inline-block;
+}
+
+.topic-container {
+    /* padding: 1em; */
+    /* margin-right: 8vw !important; */
+    margin-top: 2vh !important;
+    margin-left: 5vw !important;
+    width: 51vw;
+    height: 50vh !important;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.topic-box p {
+    font-family: "Press Start 2P";
+}
+
+.dialogue-box {
+    display: block;
+    width: 70%;
+    /* position: fixed; */
+    bottom: 2vh;
+    left: 15%;
+    margin-top: 6vh !important;
+}
+
+.dialogue-box p {
+    font-family: "Press Start 2P";
+    font-size: 3vh;
+}

@@ -125,43 +125,6 @@ nav * {
 
 .nav-text li a {
     font-family: "Press Start 2P";
-
-}
-
-.game-container {
-    position: fixed;
-    margin-top: 1.5vh;
-    margin-bottom: 1.5vh;
-    height: 90%;
-    width: 100%;
-}
-
-.portrait {
-    margin-left: 6vw;
-    margin-bottom: 1vh;
-}
-
-.topic-container {
-    float: right;
-    padding: 1em;
-    margin-right: 15vw !important;
-    width: 50vw;
-    height: 32vh;
-}
-
-.topic-box p {
-    font-family: "Press Start 2P";
-
-}
-
-.dialogue-box {
-    width: 70%;
-    height: 23vh;
-}
-
-.dialogue-box p {
-    font-family: "Press Start 2P";
-    font-size: 3vh;
 }
 
 nav {
