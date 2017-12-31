@@ -6,11 +6,6 @@
     width: 100%;
  }
 
-.portrait {
-    /* margin-left: 6vw; */
-    /* margin-bottom: 1vh; */
-}
-
 .portrait-container {
     margin-top: 10vh;
     margin-left: 6vw;
@@ -20,14 +15,13 @@
 }
 
 .topic-container {
-    /* padding: 1em; */
-    /* margin-right: 8vw !important; */
     margin-top: 2vh !important;
     margin-left: 5vw !important;
     width: 51vw;
-    height: 50vh !important;
+    height: 50vh;
     display: inline-block;
     vertical-align: top;
+    text-align: center;
 }
 
 .topic-box p {
@@ -37,7 +31,6 @@
 .dialogue-box {
     display: block;
     width: 70%;
-    /* position: fixed; */
     bottom: 2vh;
     left: 15%;
     margin-top: 6vh !important;
@@ -46,4 +39,26 @@
 .dialogue-box p {
     font-family: "Press Start 2P";
     font-size: 3vh;
+    text-align: left;
+}
+
+.topic-list {
+    overflow: auto;
+    height: 42.5vh;
+}
+
+.topic {
+    margin-top: 1em !important;
+    width: 15vw;
+    height: 15vh;
+    display: inline-block;
+    cursor: pointer
+}
+
+.topic-row {
+    padding: 1em;
+}
+
+.topic-spacer{
+    
 }

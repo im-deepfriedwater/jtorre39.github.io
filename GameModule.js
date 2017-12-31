@@ -7,6 +7,8 @@
                 .trigger("play");
         }
 
+        document.getElementById("bg").loop = true; 
+
         slideUp();
     };
 
