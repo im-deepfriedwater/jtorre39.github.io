@@ -48,7 +48,6 @@
 }
 
 .topic {
-    margin-top: 1em !important;
     width: 15vw;
     height: 15vh;
     display: inline-block;
@@ -62,4 +61,15 @@
 .topic-spacer{
     display: inline-block;
     width: 2vw;
+}
+
+.topic-placard {
+    margin-top: -5vh !important;
+    z-index: 1;
+    background-color: white;
+}
+
+.topic-icon {
+    position: relative;
+    z-index: -1;
 }
