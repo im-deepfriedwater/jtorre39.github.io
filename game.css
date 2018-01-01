@@ -48,10 +48,12 @@
 }
 
 .topic {
+    margin-top: 0 !important;
     width: 15vw;
-    height: 15vh;
+    height: auto;
     display: inline-block;
     cursor: pointer
+    overflow: hidden !important;
 }
 
 .topic-row {
@@ -64,12 +66,16 @@
 }
 
 .topic-placard {
-    margin-top: -5vh !important;
-    z-index: 1;
+    margin-top: 0px !important;
     background-color: white;
+    position: relative;
 }
 
 .topic-icon {
-    position: relative;
-    z-index: -1;
+    /* position: relative;
+    z-index: -1; */
+}
+
+.icon-wrapper {
+    height: 15vh;
 }
