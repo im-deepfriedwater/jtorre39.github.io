@@ -59,7 +59,7 @@
     };
 
     const generatePortfolio = () => {
-        
+
     }
 
     const spawnPortfolio = () => {

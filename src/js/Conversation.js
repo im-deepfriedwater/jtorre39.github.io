@@ -48,7 +48,7 @@
 
                 {
                     speaker: 1,
-                    text: "... Who said that?"
+                    text: "... Now who said that?"
                 },
 
                 {
@@ -58,7 +58,7 @@
 
                 {
                     speaker: 1,
-                    text: "Well... okay. I can spare 10 minutes."
+                    text: "Well... okay. I can spare 5 minutes."
                 },
 
                 {
