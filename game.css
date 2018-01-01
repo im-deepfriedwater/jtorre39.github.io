@@ -1,4 +1,14 @@
 
+
+.dialogue-box * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+     user-select: none; /* Non-prefixed version */
+}
+
 .game-container {
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
@@ -18,18 +28,20 @@
     margin-top: 2vh !important;
     margin-left: 5vw !important;
     width: 51vw;
-    height: 50vh;
+    height: 0vh;
     display: inline-block;
     vertical-align: top;
     text-align: center;
+    overflow: hidden;
 
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     transition-property: all;
 	transition-duration: .5s;
 }
 
-.off {
-    
+.topic-on {
+    height: 50vh;
+    overflow: auto;
 }
 
 .topic-box p {
@@ -42,6 +54,7 @@
     bottom: 2vh;
     left: 15%;
     margin-top: 6vh !important;
+    cursor: pointer;
 }
 
 .dialogue-box p {
@@ -80,4 +93,8 @@
 
 .icon-wrapper {
     height: 15vh;
+}
+
+.dialogue-container {
+    height: 100%;
 }
