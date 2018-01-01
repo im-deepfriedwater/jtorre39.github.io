@@ -60,5 +60,6 @@
 }
 
 .topic-spacer{
-    
+    display: inline-block;
+    width: 2vw;
 }
