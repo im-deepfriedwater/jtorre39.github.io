@@ -22,7 +22,9 @@
 
                 {
                     speaker: 3,
-                    text: "!"
+                    text: "!",
+                    trigger: "show-portrait"
+
                 },
 
                 {
@@ -96,7 +98,7 @@
 
                 {
                     speaker: 0,
-                    text: "Two weeks of CSS purgatory."
+                    text: "You can read all about it in the README.md!"
                 },
 
                 {
@@ -106,11 +108,21 @@
 
                 {
                     speaker: 0,
-                    text: "Very Well! Scroll and click any of the topics to hear more!",
+                    text: "Very Well! Scroll or click any of the topics to hear more!",
                     end: true
                 }
             ]
+        },
+
+        tweener: {
+            conversation: [
+                {
+
+                },
+            ]
         }
+
+
     };
 
     const getConversation = (key, index) => {

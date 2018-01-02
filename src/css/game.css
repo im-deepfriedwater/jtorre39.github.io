@@ -9,6 +9,16 @@
      user-select: none; /* Non-prefixed version */
 }
 
+.topic-container * {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+     user-select: none; /* Non-prefixed version */
+}
+
+
 .game-container {
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
@@ -22,6 +32,14 @@
     margin-bottom: 3vh;
     height: 40vh;
     display: inline-block;
+}
+
+.portrait {
+    visibility: hidden;
+}
+
+.portrait-on {
+    visibility: visible;
 }
 
 .topic-container {
@@ -87,7 +105,6 @@
 
 .topic-placard {
     margin-top: 0px !important;
-    background-color: white;
     position: relative;
 }
 

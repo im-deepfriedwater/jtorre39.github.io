@@ -57,7 +57,7 @@ nav * {
     font-size: 2em;
 }
 
-@media only screen and (max-height: 880px) {
+@media only screen and (max-height: 770px) {
   .intro-text {
     font-size: 1.6em;
   }

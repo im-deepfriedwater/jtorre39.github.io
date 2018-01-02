@@ -6,6 +6,8 @@
     const textClass = "intro-text";
     const activeClass ="active-external lvl1";
 
+    const skipAlternative = true;
+
     let userOptions;
 
     const exposition = [
@@ -50,7 +52,11 @@
 
     const expositionClick = () => {
         formatText(context);
-        $introContainer.click(noticesClick);
+        if (!skipAlternative) {
+            $introContainer.click(noticesClick);
+        } else {
+             $introContainer.click(optionsClick);
+        }
     };
 
     const noticesClick = () => {
