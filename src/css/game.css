@@ -63,6 +63,8 @@
 
 .selected-overlay {
     display: none;
+    overflow: auto;
+    height: 42.5vh;
 }
 
 .topic-list {
@@ -101,4 +103,11 @@
 
 .dialogue-container {
     height: 100%;
+}
+
+.portfolio-link {
+    text-decoration: none;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    
 }

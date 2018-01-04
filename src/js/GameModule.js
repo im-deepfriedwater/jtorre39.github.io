@@ -132,12 +132,25 @@
 
     const unfocusOnTopic = () => {
         resetAndBindDialogueBox(dialogueFunctionGenerator("stall"));
+        $topicTitle.text(standardTitle);
         toggleFocusOverlay(false);
         toggleTopicList(true);
     };
 
-    const spawnLinks = () => {
+    const spawnLinks = (links) => {
+        links.forEach((link) => {
+            $selectedOverlay.append(generateLinkHTML(link));
+        });
+    };
 
+    const generateLinkHTML = (link) => {
+        return `<div class="topic-row">
+            <div class="lvl1 topic">
+                <a href="${link.src}" class="portfolio-link">
+                    ${link.title}
+               </a>
+            </div>
+        </div>`;
     };
 
     const pauseSong = () => {
@@ -159,7 +172,7 @@
 
         topics.forEach((topic, index) => {
             currentRow += generateTopicHTML(topic);
-            if (index > 0 && index % 2 != 0) {
+            if ((index > 0 && index % 2 != 0) || index === topics.length - 1) {
                 currentRow += topicRowCloser;
                 generatedHTML += currentRow;
                 currentRow = topicRowOpener;

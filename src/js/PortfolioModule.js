@@ -11,6 +11,12 @@
             key: "maze",
             img: "images/maze.png"
         },
+
+        {
+            title: "Tell Me About Yourself",
+            key: "self",
+            img: "images/self_inclusion.png"
+        },
     ];
     const getPortfolio = () => portfolio;
     window.Portfolio = { getPortfolio };

@@ -107,7 +107,140 @@
         maze: {
             conversation: [
                 {
+                    speaker: 1,
+                    text: `What's this "Maze Builder Web App?"`
+                },
 
+                {
+                    speaker: 0,
+                    text: `Ooh. It is a web app meant for devices that have  `
+                        + "touch and accelerometer support! Written using "
+                        + " Javascript and jQuery!"
+                },
+
+                {
+                    speaker: 0,
+                    text: "It let's you draw walls using touch and you can "
+                        + "tilt the device to control the balls. Walls can be "
+                        + "moved after being placed."
+
+                },
+
+                {
+                    speaker: 0,
+                    text: "Also any existing wall can be deleted by dragging "
+                        + "the wall outside the bounds."
+
+                },
+
+                {
+                    speaker: 0,
+                    text: "The purpose of this project was to work with "
+                        + "a more direct manipulation sort of UI. An "
+                        + "excercise in interaction design if you will."
+                },
+
+                {
+                    speaker: 0,
+                    text: "It was written using JavaScript and jQuery. "
+                        + "If you have a touch screen device right now..."
+                },
+
+                {
+                    speaker: 0,
+                    text: "... you can visit the link above to try it out! ",
+                    trigger: "spawn-links",
+                    links: [
+                        {
+                            title: "Try the App!",
+                            src: "external-projects/direct-manipulation-jtorre39/maze_builder.html"
+                        }
+                    ]
+                },
+
+                {
+                    speaker: 2,
+                    text: "You consider trying the app. You build excellent "
+                        + "mazes you suspect. If not, click to continue."
+                },
+
+                {
+                    speaker: 1,
+                    text: "Alright, it would take too long for the masses to solve my "
+                        + "mazes. Let's move on.",
+                    trigger: "end"
+                },
+
+
+            ]
+        },
+
+        grnmap: {
+            conversation: [
+                {
+                    speaker: 1,
+                    text: `What's this "Maze Builder Web App?"`
+                },
+
+                {
+                    speaker: 0,
+                    text: `What's this "Maze Builder Web App?"`
+                },
+            ]
+        },
+
+        pluvio: {
+            conversation: [
+                {
+                    speaker: 1,
+                    text: `What's this "Maze Builder Web App?"`
+                },
+
+                {
+                    speaker: 0,
+                    text: `What's this "Maze Builder Web App?"`
+                },
+            ]
+        },
+
+        website: {
+            conversation: [
+                {
+                    speaker: 1,
+                    text: `What's this "Maze Builder Web App?"`
+                },
+
+                {
+                    speaker: 0,
+                    text: `What's this "Maze Builder Web App?"`
+                },
+            ]
+        },
+
+        self: {
+            conversation: [
+                {
+                    speaker: 1,
+                    text: "Why don't you tell me more about yourself?"
+                },
+
+                {
+                    speaker: 0,
+                    text: `Never thought you'd ask! `
+                },
+            ]
+        },
+
+        oxtails: {
+            conversation: [
+                {
+                    speaker: 1,
+                    text: `What's this "Maze Builder Web App?"`
+                },
+
+                {
+                    speaker: 0,
+                    text: `What's this "Maze Builder Web App?"`
                 },
             ]
         },
@@ -153,7 +286,7 @@
                     links: [
                         {
                             title: "View Animation",
-                            src: "external-projects/keyframe-tweening-demo.html"
+                            src: "external-projects/2d-scene-jtorre39/keyframe-tweening-demo.html"
                         }
                     ]
                 },
@@ -162,6 +295,11 @@
                     speaker: 2,
                     text: "Maybe I should check out the links to see what "
                         + "the kid is talking about. If not, *click to continue*",
+                },
+
+                {
+                    speaker: 1,
+                    text: "Let's move on.",
                     trigger: "end"
                 }
             ]
@@ -199,20 +337,18 @@
                 {
                     speaker: 0,
                     text: "(Hmm, this is going as bad as I thought it would be. "
-                        + "Maybe I should've practiced in front of my mirror a few "
-                        + "more times.)"
+                        + "I should've rehearsed a few more times.) "
                 },
 
                 {
                     speaker: 0,
-                    text: "Oh did you need help deciding what to click? "
-                        + "Try clicking that small turtle. It actually has "
-                        + "a lot to show you. (Unlike me, until you click something!)"
+                    text: "Did you need help deciding what to click? "
+                        + "Maybe that small turtle. It has tons to show you. "
                 },
 
                 {
                     speaker: 0,
-                    text: "(Is... this just a thing? Is this some sort of recruiter"
+                    text: "(Is... this just a thing? Is this some sort of recruiter "
                         + "tactic?)"
                 },
 
@@ -224,27 +360,28 @@
 
                 {
                     speaker: 0,
-                    text: "ACHIEVEMENT UNCLOCKED: INFINTIMUS CLICKIMUS"
+                    text: "ACHIEVEMENT UNLOCKED: INFINTIMUS CLICKIMUS"
                 },
 
                 {
                     speaker: 0,
-                    text: "I'm so happy for you! Your reward is the ability "
-                        + "to click above on any of those projects! You seemingly "
-                        + "lacked this ability before!"
+                    text: "Your reward is the ability to click anything above in the "
+                        + "portfolio! You seemingly lacked this ability before!"
+
                 },
 
                 {
                     speaker: 0,
                     text: "You excitedly try out your newfound ability and click "
-                        + "one of the projects above! Maybe the turtle one."
+                        + "one of the projects above! Like the turtle one."
                 },
 
                 {
                     speaker: 0,
-                    text: "Ahaha... I've kind of run out of things to say. "
-                        + "I would love to talk more but then it would ruin "
-                        + "the nice portfolio I prepared for you above."
+                    text: "Ahaha... I've run out of things to say. "
+                        + "I would love to talk more but it would waste this fancy "
+                        + "portfolio."
+
                 },
 
                 {
