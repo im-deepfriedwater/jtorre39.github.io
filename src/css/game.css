@@ -1,23 +1,4 @@
 
-
-.dialogue-box * {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-     user-select: none; /* Non-prefixed version */
-}
-
-.topic-container * {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-     user-select: none; /* Non-prefixed version */
-}
-
 .game-container {
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
@@ -81,17 +62,13 @@
 }
 
 .selected-overlay {
-
+    display: none;
 }
 
 .topic-list {
     overflow: auto;
     height: 42.5vh;
-    max-height: 0;
-
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-    transition-property: all;
-    transition-duration: .5s;
+    display: block;
 }
 
 .topic {

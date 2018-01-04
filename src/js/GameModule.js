@@ -74,19 +74,20 @@
 
     };
 
-    const proceed = (key, topic) => {
+    const proceed = (key) => {
+        const topic = getPortfolio().find((portfolio) => portfolio.key === key);
         focusOnTopic(topic);
-        $dialogueBox.click();
+        resetAndBindDialogueBox(stallUntilTopic);
     };
 
-    // For use when there the topic has no special events
+    // For use when there is a topic which has no special events
     const dialogueFunctionGenerator = (key) => {
 
     };
 
-    const convoFunctionGenerator = (key, topic) => {
+    const convoFunctionGenerator = (key) => {
         return () => {
-            proceed(key, topic);
+            proceed(key);
         };
     };
 
@@ -99,9 +100,9 @@
     };
 
     const focusOnTopic = (topic) => {
+        toggleTopicList(false);
         $topicTitle.text("");
         $selectedOverlay.append(generateTopicHTML(topic))
-        toggleTopicList(false);
         toggleFocusOverlay(true);
     };
 
@@ -157,17 +158,17 @@
 
     const toggleTopicList = (on) => {
         if (on) {
-            $topicList.css({"max-height": topicListHeight})
+            $topicList.css({"display": "block"})
         } else {
-            $topicList.css({"max-height": "0"})
+            $topicList.css({"display": "none"})
         }
     };
 
     const toggleFocusOverlay = (on) => {
         if (on) {
-            $selectedOverlay.css({"max-height": topicListHeight})
+            $selectedOverlay.css({"display": "block"})
         } else {
-            $selectedOverlay.css({"max-height": "0"})
+            $selectedOverlay.css({"display": "none"})
         }
     };
 
@@ -177,6 +178,10 @@
                 .prop("volume", volume)
                 .trigger("play");
         }
+    };
+
+    const resetAndBindDialogueBox = (callback) => {
+        $dialogueBox.off('click').on('click', callback);
     };
 
     window.Game = {

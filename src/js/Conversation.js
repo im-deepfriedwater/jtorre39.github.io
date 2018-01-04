@@ -104,14 +104,6 @@
             ]
         },
 
-        tweener: {
-            conversation: [
-                {
-
-                },
-            ]
-        },
-
         maze: {
             conversation: [
                 {
@@ -120,6 +112,133 @@
             ]
         },
 
+        tweener: {
+            conversation: [
+                {
+                    speaker: 1,
+                    text: "Tell me about that turtle over there."
+                },
+
+                {
+                    speaker: 0,
+                    text: "That was a project meant to replicate what many "
+                        + "video related softwares such as Adobe Premiere "
+                        + "or Maya do for you but using only JavaScript."
+                },
+
+                {
+                    speaker: 0,
+                    text: "As such, this project can be used to make an animation "
+                        + "using a JSON file which describes keyframes "
+                        + "for each object. It figure out the inbetween frames for you.",
+                    trigger: "spawn-links",
+                    links: [
+                        {
+                            title: "View Animation",
+                            src: "external-projects/keyframe-tweening-demo.html"
+                        }
+                    ]
+                },
+
+                {
+                    speaker: 0,
+                    text: "If you would like to view it in action, you can "
+                        + "check out a demo animation I made using the link "
+                        + "right there."
+                },
+
+                {
+                    speaker: 2,
+                    text: "Maybe you should check out the links to see what "
+                        + "the kid is talking about. If you're not up for it "
+                        + "click in this text box to continue",
+                    trigger: "end"
+                }
+            ]
+        },
+
+        stall: {
+            converation: [
+                {
+                    speaker: 0,
+                    text: "Oh, there's nothing here. Click up in that fancy "
+                    + "box I made."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Oh sorry, up there not here!"
+                },
+
+                {
+                    speaker: 0,
+                    text: "Ahh... haha... there's a fancy screen with your "
+                        + "clicking device's name on it! Please?"
+                },
+
+                {
+                    speaker: 0,
+                    text: "*cough*"
+                },
+
+                {
+                    speaker: 0,
+                    text: "(Hmm, this is going as bad as I thought it would be. "
+                        + "Maybe I should've practiced in front of my mirror a few "
+                        + "more times.)"
+                },
+
+                {
+                    speaker: 0,
+                    text: "Oh did you need help deciding what to click? "
+                        + "Try clicking that small turtle. It actually has "
+                        + "a lot to show you. (Unlike me, until you click something!)"
+                },
+
+                {
+                    speaker: 0,
+                    text: "(Is... this just a thing? Where recruiters completely "
+                        + "just trample all over your efforts to have something nice?)"
+                },
+
+                {
+                    speaker: 0,
+                    text: "Wowo you're probably super close to an achievement with "
+                        + "how much you've clicked down here!"
+                },
+
+                {
+                    speaker: 0,
+                    text: "ACHIEVEMENT UNCLOCKED: INFINTIMUS CLICKIMUS"
+                },
+
+                {
+                    speaker: 0,
+                    text: "I'm so happy for you! Your reward is the ability "
+                        + "to click above on any of those projects! You seemingly "
+                        + "lacked this ability before!"
+                },
+
+                {
+                    speaker: 0,
+                    text: "You excitedly try out your newfound ability and click "
+                        + "one of the projects above! Maybe the turtle one."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Ahaha... I've kind of run out of things to say. "
+                        + "I would love to talk more but then it would ruin "
+                        + "the nice portfolio I prepared for you above."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Well, if they don't know what you're saying, run it "
+                        + "one more time! I think I can repeat everything I've just said."
+                },
+            ]
+        }
 
 
     };
