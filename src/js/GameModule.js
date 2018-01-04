@@ -20,6 +20,7 @@
     const standardTitle = "Scroll or Click Below to Hear More!"
 
     const topicListHeight = "42.5vh";
+    const introKey = "intro";
 
     const speakerKey = {
         "0": "Justin Kyle Torres",
@@ -28,7 +29,6 @@
         "3": "???"
     };
 
-    let currentConversation = "intro";
     let index = 0;
 
     const Init = () => {
@@ -44,14 +44,23 @@
     };
 
     const setupTextBox = () => {
-        const convo = getConvo(currentConversation, index);
+        const convo = getConvo(introKey, index);
         $dialogueBox.click(intro);
         intro();
         $topicList.append(generateTopics());
     };
 
+    const assignOnClickToTopics = () => {
+        $(".topic").each((index, element) => {
+            const $element = $(element);
+            const key = $element.data("key");
+            $element.click(convoFunctionGenerator(key))
+        });
+    };
+
+
     const intro = () => {
-        const convo = getConvo(currentConversation, index);
+        const convo = getConvo(introKey, index);
         $speaker.text(speakerKey[convo.speaker]);
         $dialogueText.text(convo.text);
 
@@ -64,26 +73,47 @@
             assignOnClickToTopics();
             $topicTitle.text(standardTitle);
             toggleTopicList(true);
-            $dialogueBox.click(stallUntilTopic);
+            resetAndBindDialogueBox(dialogueFunctionGenerator("stall"));
         }
 
         index = convo.end ? index : index + 1;
     };
 
-    const stallUntilTopic = () => {
+    // For use when there is a topic which has no special events
+    const dialogueFunctionGenerator = (key) => {
+        let index = 0;
 
+        return () => {
+            const convo = getConvo(key, index);
+            $speaker.text(speakerKey[convo.speaker]);
+            $dialogueText.text(convo.text);
+            index++;
+
+            if (convo.trigger) {
+                switch (convo.trigger) {
+                    case "repeat":
+                        index = 0;
+                        break;
+                    case "spawn-links":
+                        spawnLinks(convo.links);
+                        break;
+                    case "end":
+                        unfocusOnTopic();
+                    break;
+                }
+            }
+
+        };
     };
 
     const proceed = (key) => {
         const topic = getPortfolio().find((portfolio) => portfolio.key === key);
+        const callback = dialogueFunctionGenerator(key);
         focusOnTopic(topic);
-        resetAndBindDialogueBox(stallUntilTopic);
+        resetAndBindDialogueBox(callback);
+        callback();
     };
 
-    // For use when there is a topic which has no special events
-    const dialogueFunctionGenerator = (key) => {
-
-    };
 
     const convoFunctionGenerator = (key) => {
         return () => {
@@ -91,22 +121,22 @@
         };
     };
 
-    const assignOnClickToTopics = () => {
-        $(".topic").each((index, element) => {
-            const $element = $(element);
-            const key = $element.data("key");
-            $element.click(convoFunctionGenerator(key))
-        });
-    };
-
     const focusOnTopic = (topic) => {
         toggleTopicList(false);
         $topicTitle.text("");
+        $selectedOverlay.empty();
+        $selectedOverlay.append("<br></br>")
         $selectedOverlay.append(generateTopicHTML(topic))
         toggleFocusOverlay(true);
     };
 
     const unfocusOnTopic = () => {
+        resetAndBindDialogueBox(dialogueFunctionGenerator("stall"));
+        toggleFocusOverlay(false);
+        toggleTopicList(true);
+    };
+
+    const spawnLinks = () => {
 
     };
 
@@ -142,7 +172,7 @@
     };
 
     const generateTopicHTML = (topic) => {
-       return `<div class="topic" data-key="${topic.key}">
+        return `<div class="topic" data-key="${topic.key}">
                    <div class="icon-wrapper lvl1">
                        <img class="topic-icon" src="${topic.img}">
                    </div>
@@ -158,17 +188,25 @@
 
     const toggleTopicList = (on) => {
         if (on) {
-            $topicList.css({"display": "block"})
+            $topicList.css({
+                "display": "block"
+            })
         } else {
-            $topicList.css({"display": "none"})
+            $topicList.css({
+                "display": "none"
+            })
         }
     };
 
     const toggleFocusOverlay = (on) => {
         if (on) {
-            $selectedOverlay.css({"display": "block"})
+            $selectedOverlay.css({
+                "display": "block"
+            })
         } else {
-            $selectedOverlay.css({"display": "none"})
+            $selectedOverlay.css({
+                "display": "none"
+            })
         }
     };
 

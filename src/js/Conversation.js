@@ -121,16 +121,34 @@
 
                 {
                     speaker: 0,
-                    text: "That was a project meant to replicate what many "
-                        + "video related softwares such as Adobe Premiere "
-                        + "or Maya do for you but using only JavaScript."
+                    text: "That was a project meant to determine the in-between "
+                        + "frames of an animation when given only the key frames."
                 },
 
                 {
                     speaker: 0,
-                    text: "As such, this project can be used to make an animation "
-                        + "using a JSON file which describes keyframes "
-                        + "for each object. It figure out the inbetween frames for you.",
+                    text: "It was coded purely in JavaScript. It allows users to "
+                        + "write and create animations entirely in JavaScript!"
+                },
+
+                {
+                    speaker: 0,
+                    text: "If you give it a JSON object containing a list "
+                        + "of keyframes for each object."
+
+                },
+
+                {
+                    speaker: 0,
+                    text: "Additionally, the objects to animate are made using JavaScript."
+
+                },
+
+                {
+                    speaker: 0,
+                    text: "If you would like to view it in action, you can "
+                        + "check out a demo animation I made using the link "
+                        + "right there.",
                     trigger: "spawn-links",
                     links: [
                         {
@@ -141,24 +159,21 @@
                 },
 
                 {
-                    speaker: 0,
-                    text: "If you would like to view it in action, you can "
-                        + "check out a demo animation I made using the link "
-                        + "right there."
-                },
-
-                {
                     speaker: 2,
-                    text: "Maybe you should check out the links to see what "
-                        + "the kid is talking about. If you're not up for it "
-                        + "click in this text box to continue",
+                    text: "Maybe I should check out the links to see what "
+                        + "the kid is talking about. If not, *click to continue*",
                     trigger: "end"
                 }
             ]
         },
 
         stall: {
-            converation: [
+            conversation: [
+                {
+                     speaker: 0,
+                     text: "Click on any of the above items!"
+                },
+
                 {
                     speaker: 0,
                     text: "Oh, there's nothing here. Click up in that fancy "
@@ -197,13 +212,13 @@
 
                 {
                     speaker: 0,
-                    text: "(Is... this just a thing? Where recruiters completely "
-                        + "just trample all over your efforts to have something nice?)"
+                    text: "(Is... this just a thing? Is this some sort of recruiter"
+                        + "tactic?)"
                 },
 
                 {
                     speaker: 0,
-                    text: "Wowo you're probably super close to an achievement with "
+                    text: "Wowowow you're probably super close to an achievement with "
                         + "how much you've clicked down here!"
                 },
 
@@ -235,12 +250,16 @@
                 {
                     speaker: 0,
                     text: "Well, if they don't know what you're saying, run it "
-                        + "one more time! I think I can repeat everything I've just said."
+                        + "one more time! I think I can repeat everything I've just said.",
+                },
+
+                {
+                    speaker: 0,
+                    text: "Scroll or click any of the topics to hear more!",
+                    trigger: "repeat"
                 },
             ]
         }
-
-
     };
 
     const getConversation = (key, index) => {
