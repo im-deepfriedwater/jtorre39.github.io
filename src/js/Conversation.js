@@ -93,22 +93,12 @@
 
                 {
                     speaker: 1,
-                    text: "How did you do that?"
+                    text: "Huh. Wow."
                 },
 
                 {
                     speaker: 0,
-                    text: "You can read all about it in the README.md!"
-                },
-
-                {
-                    speaker: 1,
-                    text: "Uh... interesting. Continue."
-                },
-
-                {
-                    speaker: 0,
-                    text: "Very Well! Scroll or click any of the topics to hear more!",
+                    text: "Scroll or click any of the topics to hear more!",
                     end: true
                 }
             ]
@@ -120,7 +110,16 @@
 
                 },
             ]
-        }
+        },
+
+        maze: {
+            conversation: [
+                {
+
+                },
+            ]
+        },
+
 
 
     };
