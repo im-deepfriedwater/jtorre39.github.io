@@ -21,7 +21,8 @@
     preload (
         "images/smol.png",
         "images/maze.png",
-        "images/self_inclusion.png"
+        "images/self_inclusion.png",
+        "images/grnmap.png",
     )
 
     window.Preload = { images };

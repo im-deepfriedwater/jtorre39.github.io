@@ -13,9 +13,15 @@
         },
 
         {
-            title: "Tell Me About Yourself",
+            title: "Talk About Yourself",
             key: "self",
             img: "images/self_inclusion.png"
+        },
+
+        {
+            title: "GRNmap Research",
+            key: "grnmap",
+            img: "images/grnmap.png"
         },
     ];
     const getPortfolio = () => portfolio;

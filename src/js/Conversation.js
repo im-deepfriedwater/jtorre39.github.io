@@ -87,7 +87,8 @@
 
                 {
                     speaker: 2,
-                    text: "Suddenly, you see a screen appear before you!",
+                    text: "Suddenly, you see a screen appear before you! \n"
+                        + "*Click here to continue*",
                     trigger: "portfolio-spawn"
                 },
 
@@ -108,7 +109,7 @@
             conversation: [
                 {
                     speaker: 1,
-                    text: `What's this "Maze Builder Web App?"`
+                    text: `What's this "Maze Builder Web App"?`
                 },
 
                 {
@@ -119,7 +120,7 @@
 
                 {
                     speaker: 0,
-                    text: "It lets you draw walls using touch and you can "
+                    text: "It lets you draw walls and "
                         + "tilt the device to control the balls. Walls can be "
                         + "moved after being placed."
 
@@ -177,13 +178,125 @@
             conversation: [
                 {
                     speaker: 1,
-                    text: `What's this "Maze Builder Web App?"`
+                    text: `Tell me about your "GRNmap Research" and your role on it.`
                 },
 
                 {
                     speaker: 0,
-                    text: `What's this "Maze Builder Web App?"`
+                    text: "GRNmap is a software package written in MATLAB meant "
+                        + "for modeling the dynamics of GRNs."
                 },
+
+                {
+                    speaker: 0,
+                    text: "It is a research project I work on at university."
+                        + "I've been on it for about a year and a half."
+                },
+
+                {
+                    speaker: 1,
+                    text: "A GRN?"
+                },
+
+                {
+                    speaker: 0,
+                    text: "GRN stands for gene regulatory network, and it "
+                        + "describes gene expressions over time."
+                },
+
+                {
+                    speaker: 1,
+                    text: "Genes bring me back to high school biology. This sounds "
+                        + "like a complicated project."
+                },
+
+                {
+                    speaker: 0,
+                    text: "We collaborate with professors "
+                        + "across three different disciplines to work on this project."
+                },
+
+                {
+                    speaker: 0,
+                    text: "The icon up there is GRNsight's, a sister project. "
+                        + "They work on visualization using GRNmap's output."
+                },
+
+                {
+                    speaker: 1,
+                    text: "So one of the keywords for this project is collaboration."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Yes! That's right. There's a lot of communication and "
+                        + "cross-discipline work that happens here."
+                }
+
+
+                {
+                    speaker: 0,
+                    text: "My role is not unlike that of a software engineer. I come in "
+                        + "for weekly meetings, then I work on the tasks for the week."
+                },
+
+                {
+                    speaker: 0,
+                    text: "My time on the project has encompassed a code refactorization, "
+                        + "updating an integral data structure to account for missing values, "
+                },
+
+                {
+                    speaker: 0,
+                    text: "implemented new features, fixed bugs, all the while maintaining "
+                        + "and improving the test suite. I'm still currently on this project."
+                },
+
+                {
+                    speaker: 1,
+                    text: "So you did all this in MATLAB? We unfortunately do not work with MATLAB here."
+                },
+
+                {
+                    speaker: 0,
+                    text: "I'm a firm believer that for a computer scientist, "
+                        + "programming languages are but a tool in our tool box."
+                },
+
+                {
+                    speaker: 0,
+                    text: "General concepts and paradigms are across all programming "
+                        + "languages. The experience I have while working on GRNmap "
+                        + "transfers to any other software engineering. "
+                },
+
+                {
+                    speaker: 1,
+                    text: "Well said."
+                },
+
+                {
+                    speaker: 0,
+                    text: "I recently presented a poster on this project at " +
+                       + "an academic conference known as SCCUR 2017. You can also " +
+                       + "view the website and GitHub up above!",
+
+                    trigger: "spawn-links",
+                    links: [
+
+                        {
+                            title: "View Website",
+                            src: "http://kdahlquist.github.io/GRNmap/index.html"
+                        },
+
+                        {
+                            title: "Github Repository",
+                            src: "https://github.com/kdahlquist/GRNmap"
+                        }
+                    ]
+                },
+
+
             ]
         },
 
@@ -278,7 +391,7 @@
 
                 {
                     speaker: 0,
-                    text: "I believe the art can speak for itself. You can "
+                    text: "I believe the art can speak for itself! You can "
                         + "check out a demo animation I made using the link "
                         + "right there.",
                     trigger: "spawn-links",
