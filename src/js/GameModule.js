@@ -10,6 +10,7 @@
     const $topicTitle = $(".topic-title");
     const $selectedOverlay = $(".selected-overlay");
     const $bg = $("#bg");
+    const $choose = $("#choose");
 
     const getConvo = window.Conversation.getConversation;
     const getPortfolio = window.Portfolio.getPortfolio;
@@ -20,7 +21,7 @@
 
     const standardTitle = "Scroll or Click Below to Hear More!"
 
-    const topicListHeight = "42.5vh";
+    const chooseVolume = "0.1";
     const introKey = "intro";
 
     const speakerKey = {
@@ -117,8 +118,8 @@
         focusOnTopic(topic);
         resetAndBindDialogueBox(callback);
         callback();
+        playSound($choose, chooseVolume);
     };
-
 
     const convoFunctionGenerator = (key) => {
         return () => {
