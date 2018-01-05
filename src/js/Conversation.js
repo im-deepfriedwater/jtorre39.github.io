@@ -113,14 +113,13 @@
 
                 {
                     speaker: 0,
-                    text: `Ooh. It is a web app meant for devices that have  `
-                        + "touch and accelerometer support! Written using "
-                        + " Javascript and jQuery!"
+                    text: "Written using JavaScript and jQuery, "
+                        + "it is meant for devices with touch and accelormeters."
                 },
 
                 {
                     speaker: 0,
-                    text: "It let's you draw walls using touch and you can "
+                    text: "It lets you draw walls using touch and you can "
                         + "tilt the device to control the balls. Walls can be "
                         + "moved after being placed."
 
@@ -136,14 +135,13 @@
                 {
                     speaker: 0,
                     text: "The purpose of this project was to work with "
-                        + "a more direct manipulation sort of UI. An "
-                        + "excercise in interaction design if you will."
+                        + "a direct manipulation sort of UI. It was a great "
+                        +"interacion design exercise."
                 },
 
                 {
                     speaker: 0,
-                    text: "It was written using JavaScript and jQuery. "
-                        + "If you have a touch screen device right now..."
+                    text: "If you have a touch screen device right now..."
                 },
 
                 {
@@ -153,7 +151,7 @@
                     links: [
                         {
                             title: "Try the App!",
-                            src: "external-projects/direct-manipulation-jtorre39/maze_builder.html"
+                            src: "../../external_projects/direct-manipulation-jtorre39/maze_builder.html"
                         }
                     ]
                 },
@@ -226,7 +224,8 @@
 
                 {
                     speaker: 0,
-                    text: `Never thought you'd ask! `
+                    text: `Never thought you'd ask!`,
+                    trigger: "end"
                 },
             ]
         },
@@ -266,8 +265,8 @@
 
                 {
                     speaker: 0,
-                    text: "If you give it a JSON object containing a list "
-                        + "of keyframes for each object."
+                    text: "You merely need to give it a JSON file that contains "
+                        + "a list of keyframes. It does everything else for you."
 
                 },
 
@@ -279,14 +278,14 @@
 
                 {
                     speaker: 0,
-                    text: "If you would like to view it in action, you can "
+                    text: "I believe the art can speak for itself. You can "
                         + "check out a demo animation I made using the link "
                         + "right there.",
                     trigger: "spawn-links",
                     links: [
                         {
                             title: "View Animation",
-                            src: "external-projects/2d-scene-jtorre39/keyframe-tweening-demo.html"
+                            src: "../../external_projects/2d-scene-jtorre39/keyframe-tweening-demo.html"
                         }
                     ]
                 },
@@ -336,7 +335,7 @@
 
                 {
                     speaker: 0,
-                    text: "(Hmm, this is going as bad as I thought it would be. "
+                    text: "(Hmm, this is going as bad as I thought it would. "
                         + "I should've rehearsed a few more times.) "
                 },
 
@@ -360,7 +359,9 @@
 
                 {
                     speaker: 0,
-                    text: "ACHIEVEMENT UNLOCKED: INFINTIMUS CLICKIMUS"
+                    text: "ACHIEVEMENT UNLOCKED: INFINTIMUS CLICKIMUS",
+                    trigger: "alert",
+                    alert: "ACHIEVEMENT UNLOCKED: INFINTIMUS CLICKIMUS"
                 },
 
                 {

@@ -9,6 +9,7 @@
     const $topicList = $(".topic-list");
     const $topicTitle = $(".topic-title");
     const $selectedOverlay = $(".selected-overlay");
+    const $bg = $("#bg");
 
     const getConvo = window.Conversation.getConversation;
     const getPortfolio = window.Portfolio.getPortfolio;
@@ -37,6 +38,7 @@
         document.getElementById("bg").loop = true;
         setupTextBox();
         slideUp();
+        window.PauseResume.setupPauseResume(resume, pause);
     };
 
     const slideUp = () => {
@@ -97,6 +99,9 @@
                     case "spawn-links":
                         spawnLinks(convo.links);
                         break;
+                    case "alert":
+                        alert(convo.alert);
+                        break;
                     case "end":
                         unfocusOnTopic();
                     break;
@@ -146,19 +151,11 @@
     const generateLinkHTML = (link) => {
         return `<div class="topic-row">
             <div class="lvl1 topic">
-                <a href="${link.src}" class="portfolio-link">
+                <a href="${link.src}" class="portfolio-link" target="_blank">
                     ${link.title}
                </a>
             </div>
         </div>`;
-    };
-
-    const pauseSong = () => {
-
-    };
-
-    const resumeSong = () => {
-
     };
 
     const generateTopics = () => {
@@ -229,6 +226,16 @@
                 .prop("volume", volume)
                 .trigger("play");
         }
+    };
+
+    const resume = () => {
+        if (window.Settings.sound) {
+            $bg.trigger("play");
+        }
+    };
+
+    const pause = () => {
+        $bg.trigger("pause");
     };
 
     const resetAndBindDialogueBox = (callback) => {
