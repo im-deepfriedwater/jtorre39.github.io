@@ -397,21 +397,38 @@
 
                 {
                     speaker: 1,
-                    text: "(... There's no way. I'm such a great recruiter. It's" +
+                    text: "(... There's no way. I'm such a great recruiter. It's " +
                         "impossible to capture that in some interactive portfolio.)"
                 },
 
                 {
                     speaker: 0,
-                    text: "H-hey you seem to have spaced out. You can view the Github " +
-                        "repository for this website at the link above!",
+                    text: "You can view the GitHub repository and also I blog " +
+                        "I wrote about the making of this site at the links above!",
                     trigger: "spawn-links",
                     links: [
                         {
-                            title: "Github Repository",
+                            title: "GitHub Repository",
                             src: "https://github.com/jtorre39/jtorre39.github.io"
                         },
+
+                        {
+                            title: "Blog",
+                            src: "https://medium.com/@justintorres56/the-making-of-an-interactive-portfolio-experience-1c297775d12e"
+                        },
                     ]
+                },
+
+                {
+                    speaker: 2,
+                    text: "If you are done viewing the links, click here to continue. " +
+                        "Or you may continue spacing out."
+                },
+
+                {
+                    speaker: 1,
+                    text: "A-ah. Most interesting. Let's continue.",
+                    trigger: "end"
                 },
             ]
         },
