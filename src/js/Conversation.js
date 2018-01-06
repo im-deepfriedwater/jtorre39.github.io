@@ -834,7 +834,7 @@
 
                 {
                     speaker: 0,
-                    text: "I did end up quitting the job however to focus on getting my "
+                    text: "I did end up leaving the job however to focus on getting my "
                         + "grades back up, which did end up happening."
                 },
 
