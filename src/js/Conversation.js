@@ -55,7 +55,7 @@
 
                 {
                     speaker: 2,
-                    text: "(+ 5 to your ego.)"
+                    text: "You feel your ego swell with acknowledgement. "
                 },
 
                 {
@@ -70,7 +70,7 @@
 
                 {
                     speaker: 0,
-                    text: "I'm a Junior pursuing a degree in Computer Science at " +
+                    text: "I'm a Junior pursuing a Bachelor's degree in Computer Science at " +
                            "Loyola Marymount University."
                 },
 
@@ -801,8 +801,8 @@
 
                 {
                     speaker: 0,
-                    text: "Well, if they don't know what you're saying, run back " +
-                        "one more time! I think I can repeat everything I've just said."
+                    text: "Well, maybe you didn't hear me the first time? " +
+                        "I think I can repeat everything I've just said."
                 },
 
                 {
@@ -870,7 +870,7 @@
 
                 {
                     speaker: 2,
-                    text: "You take a moment and consider checking out the resume." +
+                    text: "You take a moment and consider checking out the resume. " +
                         "If you're sick of looking at resumes, click to continue."
                 },
 

@@ -201,7 +201,7 @@
                    </div>
                    <div class="topic-placard lvl1">
                         <p>
-                            ${topic.title} ${linkBreakIfNecessary(topic)}
+                            ${topic.title}${linkBreakIfNecessary(topic)}
                         </p>
                    </div>
                </div> \n`;
