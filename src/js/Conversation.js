@@ -135,9 +135,9 @@
 
                 {
                     speaker: 0,
-                    text: "The purpose of this project was to work with " +
-                        "a direct manipulation sort of UI. It was a great " +
-                        "interacion design exercise."
+                    text: "The purpose was to work with " +
+                        "a direct manipulation UI. It was a great " +
+                        "interaction design exercise."
                 },
 
                 {
@@ -233,14 +233,14 @@
 
                 {
                     speaker: 0,
-                    text: "My role is not unlike that of a software engineer. I come in " +
+                    text: "My role is like a software engineer. I come in " +
                         "for weekly meetings, then I work on the tasks for the week."
                 },
 
                 {
                     speaker: 0,
-                    text: "My time on the project has encompassed a code refactorization, " +
-                        "updating an integral data structure to account for missing values, "
+                    text: "My work has encompassed code refactorization, " +
+                        "updating an integral data structure for missing input, "
                 },
 
 
@@ -264,7 +264,12 @@
                 {
                     speaker: 0,
                     text: "General concepts and paradigms are across all programming " +
-                        "languages. The experience I have while working on GRNmap " +
+                        "languages."
+                },
+
+                {
+                    speaker: 0,
+                    text: "The experience I have while working on GRNmap " +
                         "transfers to any other software engineering. "
                 },
 
@@ -276,8 +281,7 @@
                 {
                     speaker: 0,
                     text: "I recently presented a poster on this project at " +
-                       "an academic conference known as SCCUR 2017. You can also " +
-                       "view the website and GitHub up above!",
+                       "an academic conference known as SCCUR 2017.",
 
                     trigger: "spawn-links",
                     links: [
@@ -293,6 +297,34 @@
                         }
                     ]
                 },
+
+                {
+                    speaker: 0,
+                    text: " You can also view the website and GitHub repository up above!",
+                },
+
+                {
+                    speaker: 2,
+                    text: "You see glorious links to other websites. You ponder " +
+                        "whether to click them. If not, click to continue."
+                },
+
+                {
+                    speaker: 2,
+                    text: "You sneeze.",
+                },
+
+
+                {
+                    speaker: 0,
+                    text: "Bless you!"
+                },
+
+                {
+                    speaker: 1,
+                    text: "Thank you. Let me hear about something else now.",
+                    trigger: "end"
+               }
             ]
         },
 
@@ -476,7 +508,14 @@
 
                 {
                     speaker: 0,
-                    text: "Oh I would love to work on a video game."
+                    text: "Oh I would love to work on a video game. I think video games " +
+                        "are something of the perfect medium."
+                },
+
+                {
+                    speaker: 0,
+                    text: "They allow for such a unique combination of art, sound, story " +
+                        "and interactivity."
                 },
 
                 {
@@ -503,12 +542,119 @@
             conversation: [
                 {
                     speaker: 1,
-                    text: `What's this "Maze Builder Web App?"`
+                    text: `What's this "Oxtails Project"?`
                 },
 
                 {
                     speaker: 0,
-                    text: `What's this "Maze Builder Web App?"`
+                    text: "Oxtails is a codename for a video game I am working on " +
+                        "with some classmates."
+                },
+
+                {
+                    speaker: 0,
+                    text: "We unfortunately don't have much in terms of concrete content done. "
+                        + "It's very much still in a prototype phase."
+                },
+
+                {
+                    speaker: 0,
+                    text: "It currently runs on Unity and C#."
+                },
+
+                {
+                    speaker: 0,
+                    text: "I am the programmer for the project and did finish writing a " +
+                        "dialogue system and basic platform system for it. "
+                },
+
+                {
+                    speaker: 0,
+                    text: "It is meant to be a 2D puzzle-platfomer with an emphasis " +
+                        "on character interactions."
+                },
+
+                {
+                    speaker: 1,
+                    text: "Why don't you tell me about those systems you wrote?"
+                },
+
+                {
+                    speaker: 0,
+                    text: "Oh the platforming system is nothing special. You can run around " +
+                        "jump, wall-slide, and pick up powerups."
+                },
+
+                {
+                    speaker: 0,
+                    text: "The dialogue system  " +
+                        "parses XML files and dynamically configures the onscreen actors."
+                },
+
+                {
+                    speaker: 0,
+                    text: "It has the capacity to give the dialogue options too, "
+                        + "thus allowing branching paths within dialogue. "
+                },
+
+                {
+                    speaker: 0,
+                    text: "I had to come up with some data structures to handle all "
+                        + "that as well. It was a fun excercise."
+                },
+
+                {
+                    speaker: 1,
+                    text: 'Also, why "Oxtails?"'
+                },
+
+                {
+                    speaker: 0,
+                    text: "We took inspiration from indie game company Doublefine " +
+                        "who use bars they visited for codenames of projects."
+                },
+
+                {
+                    speaker: 0,
+                    text: "One of my family dishes has oxtails in it, I happened " +
+                        "to be eating it while discussing what to name it."
+                },
+
+                {
+                    speaker: 1,
+                    text: "Admittedly it's an odd name for a video game."
+                },
+
+                {
+                    speaker: 0,
+                    text: "I agree but the name ended up sticking. It's just " +
+                        "subsitute name before we come up with a real name."
+                },
+
+                {
+                    speaker: 0,
+                    text: "You can see a clip of the dialogue system up above! " +
+                        "We made some scratch art and dialogue for it.",
+                    trigger: "spawn-links",
+                    links: [
+                        {
+                            title: "Watch Clip",
+                            src: "https://youtu.be/r7NK5kmcToA"
+                        }
+                    ]
+                },
+
+                {
+                    speaker: 2,
+                    text: "It piques your interest. So you consider checking out the video. " +
+                        "Else, click this dialogue box to continue."
+                },
+
+                {
+                    speaker: 1,
+                    text: "I wish you good luck on the project Mr. Torres. I'd like to ask you " +
+                        "about something else now.",
+                    trigger: "end"
                 },
             ]
         },
@@ -672,15 +818,210 @@
             conversation: [
                 {
                     speaker: 1,
-                    text: "I am merely a demo to easily show the format."
+                    text: "Why don't you tell me about your work history?"
                 },
 
                 {
                     speaker: 0,
-                    text: "Wow I wish I was you!"
+                    text: "I worked at the school library as an ITS Helpdesk Technician" +
+                        "for about two years."
                 },
+
+                {
+                    speaker: 0,
+                    text: "I gained valuable experience in communication, listening, " +
+                        "and problem-solving with patrons."
+                },
+
+                {
+                    speaker: 0,
+                    text: "I did end up quitting the job however to focus on getting my "
+                        + "grades back up, which did end up happening."
+                },
+
+                {
+                    speaker: 0,
+                    text: "This upcoming semester I'll be a lab teacher's assistant " +
+                        "at Loyola Marymount University."
+                },
+
+                {
+                    speaker: 0,
+                    text: "I'll be getting paid to help students with any questions " +
+                        "they have regarding computer science homework."
+                },
+
+                {
+                    speaker: 0,
+                    text: "It truthfully is something I'm very thankful and excited "
+                        + "for."
+                },
+
+                {
+                    speaker: 0,
+                    text: "You can see more about my work experiences on my resume!",
+                    trigger: "spawn-links",
+                    links: [
+                        {
+                            title: "Resume",
+                            src: "https://www.dropbox.com/s/qlr66tlkt7zctsq/Justin%20Kyle%20Torres%20Resume.pdf?dl=0"
+                        }
+                    ]
+                },
+
+                {
+                    speaker: 2,
+                    text: "You take a moment and consider checking out the resume." +
+                        "If you're sick of looking at resumes, click to continue."
+                },
+
+                {
+                    speaker: 1,
+                    text: "Let's look at something else shall we?",
+                    trigger: "end"
+                }
             ]
         },
+
+        finale: {
+            conversation: [
+                {
+                    speaker: 2,
+                    text: "You seem to have talked about everything on the porfolio." +
+                        "You wonder if awkward silence ensues.",
+                    trigger: "close-portfolio"
+
+                },
+
+                {
+                    speaker: 0,
+                    text: "Wow, I admittedly never expected someone to actually " +
+                        "ask about everything. "
+                },
+
+                {
+                    speaker: 1,
+                    text: "I wasn't expecting to spend more than three minutes. " +
+                        "I'm impressed you held my attention so long."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Thank you so much for giving this so much of your time!"
+                },
+
+                {
+                    speaker: 1,
+                    text: "Yeah, yeah, all part of an ace recruiter's job."
+                },
+
+                {
+                    speaker: 1,
+                    text: "I'll be honest. I don't look for candidates who proclaim " +
+                        "themselves as something."
+                },
+
+                {
+                    speaker: 1,
+                    text: "I look for candidates who prove what they are through " +
+                        "their work and their actions.",
+                    trigger: "alert",
+                    alert: "ACHIEVEMENT UNLOCKED: TRUE ENDING"
+                },
+
+                {
+                    speaker: 0,
+                    text: "Right."
+                },
+
+                {
+                    speaker: 1,
+                    text: "I will say you did show me something today. It was "
+                        + "mildly entertaining to say the least. "
+                },
+
+                {
+                    speaker: 1,
+                    text: "Do you have anything to add?"
+                },
+
+                {
+                    speaker: 0,
+                    text: "Well I just wante-"
+                },
+
+                {
+                    speaker: 1,
+                    text: "Nevermind, I have more to say."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Oh OK."
+                },
+
+                {
+                    speaker: 1,
+                    text: "You did talk a lot. But you did so in a way that " +
+                        "speaks to your creativity and identity."
+                },
+
+                {
+                    speaker: 1,
+                    text: "At my level, I've dealt with a lot a resistance " +
+                        "from higher-ups to get where I am today."
+                },
+
+                {
+                    speaker: 1,
+                    text: "But I'm proud of all the people I've hired, even the " +
+                        "ones who did not quite pan out. "
+                },
+
+                {
+                    speaker: 1,
+                    text: "Keep seeking out projects and work you can be proud of."
+                },
+
+                {
+                    speaker: 1,
+                    text: "I do have to take off now. You found your way up " +
+                        "here and I'm sure you can find your way out."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Ah, thank you! I'm very much grateful for all the time " +
+                        "you gave to me."
+                },
+
+                {
+                    speaker: 2,
+                    text: "You get up, and begin to walk towards the exit."
+                },
+
+                {
+                    speaker: 1,
+                    text: "I'll be keeping an eye out for your resume when you do " +
+                        "get around to applying."
+                },
+
+                {
+                    speaker: 2,
+                    text: "The next day, you consider contacting the kid."
+                },
+
+                {
+                    speaker: 2,
+                    text: "THE END",
+                    trigger: "alert",
+                    alert: "You've finished the game! If you close the tab, " +
+                        "it will now no longer be considered rude. If you want to " +
+                        "for some reason experience it again, refresh the page! "
+                }
+            ]
+        },
+
 
         template: {
             conversation: [
@@ -695,10 +1036,13 @@
                 },
             ]
         },
+
+
     };
 
     const getConversation = (key, index) => {
-        return ConversationDatabase[key].conversation[index]
+        return ConversationDatabase[key].conversation[index];
     };
+
     window.Conversation = { getConversation };
 })();

@@ -96,6 +96,10 @@
     z-index: 2;
 }
 
+.read-topic {
+    color: gray;
+}
+
 .icon-wrapper {
     height: 15vh;
     overflow: hidden;

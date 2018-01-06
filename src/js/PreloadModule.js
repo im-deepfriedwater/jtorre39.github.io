@@ -23,6 +23,7 @@
         "images/maze.png",
         "images/self_inclusion.png",
         "images/grnmap.png",
+        "images/oxtails.png"
     )
 
     window.Preload = { images };

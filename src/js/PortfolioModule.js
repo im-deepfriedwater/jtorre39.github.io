@@ -37,7 +37,23 @@
             img: "images/pluvio.png",
             lineBreak: "App",
         },
+
+        {
+            title: "Work",
+            key: "work",
+            img: "images/self_inclusion.png",
+            lineBreak: "Experience",
+        },
+
+        {
+            title: "Oxtails",
+            key: "oxtails",
+            img: "images/oxtails.png",
+            lineBreak: "Project",
+
+        },
     ];
     const getPortfolio = () => portfolio;
-    window.Portfolio = { getPortfolio };
+    const getTopicCount = () => portfolio.length;
+    window.Portfolio = { getPortfolio, getTopicCount };
 })();

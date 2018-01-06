@@ -14,6 +14,7 @@
 
     const getConvo = window.Conversation.getConversation;
     const getPortfolio = window.Portfolio.getPortfolio;
+    const numberOfTopics = window.Portfolio.getTopicCount();
 
     const activeClass = "topic-on";
     const activePortrait = "portrait-on";
@@ -23,6 +24,7 @@
 
     const chooseVolume = "0.1";
     const introKey = "intro";
+    const endKey = "finale";
 
     const speakerKey = {
         "0": "Justin Kyle Torres",
@@ -32,10 +34,11 @@
     };
 
     let index = 0;
+    let readTopics = { numberRead: 0 };
 
     const Init = () => {
         playSound($("#bg"), 0.07);
-        // Unsure how to loop easily using jQuery.
+        // Unsure how to audio loop easily using jQuery.
         document.getElementById("bg").loop = true;
         setupTextBox();
         slideUp();
@@ -60,7 +63,6 @@
             $element.click(convoFunctionGenerator(key))
         });
     };
-
 
     const intro = () => {
         const convo = getConvo(introKey, index);
@@ -103,6 +105,9 @@
                     case "alert":
                         alert(convo.alert);
                         break;
+                    case "close-portfolio":
+                        despawnPortfolio();
+                        break;
                     case "end":
                         unfocusOnTopic();
                     break;
@@ -122,7 +127,9 @@
     };
 
     const convoFunctionGenerator = (key) => {
-        return () => {
+        return function () {
+            $(this).addClass("read-topic");
+            console.log($(this))
             proceed(key);
         };
     };
@@ -134,6 +141,7 @@
         $selectedOverlay.append("<br></br>")
         $selectedOverlay.append(generateTopicHTML(topic))
         toggleFocusOverlay(true);
+        trackReadTopics(topic.key);
     };
 
     const unfocusOnTopic = () => {
@@ -141,6 +149,10 @@
         $topicTitle.text(standardTitle);
         toggleFocusOverlay(false);
         toggleTopicList(true);
+
+        if (checkIfEnding()) {
+            startEnding();
+        }
     };
 
     const spawnLinks = (links) => {
@@ -203,6 +215,10 @@
         $topicContainer.addClass(activeClass);
     };
 
+    const despawnPortfolio = () => {
+        $topicContainer.css({ "max-height": 0});
+    };
+
     const toggleTopicList = (on) => {
         if (on) {
             $topicList.css({
@@ -249,7 +265,25 @@
         $dialogueBox.off('click').on('click', callback);
     };
 
+    const checkIfEnding = () => {
+        return readTopics.numberRead === numberOfTopics;
+    };
+
+    const trackReadTopics = (key) => {
+        if (!readTopics[key]) {
+            readTopics[key] = true;
+            readTopics.numberRead++;
+        }
+    };
+
+    const startEnding = () => {
+        const callback = dialogueFunctionGenerator("finale");
+        resetAndBindDialogueBox(callback);
+        despawnPortfolio();
+        callback();
+    };
+
     window.Game = {
         Init
-    }
+    };
 })(jQuery)
