@@ -5,5 +5,7 @@ I wrote some insight into the behind the scenes which can be viewed [here!](http
 # An Interactive Portfolio Inspired by Video Games
 
 - Written using JavaScript, jQuery, HTML/CSS.
+- It is only optimized for desktop viewing as of now.
 - Song used, Nerd Table at the High School Cafeteria of Life by An0vo.
 - All sound effects were created using [Bfxr](https://www.bfxr.net/).
+- Credits to various sources are made throughout the code.

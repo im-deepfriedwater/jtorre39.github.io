@@ -668,6 +668,20 @@
             ]
         },
 
+        work: {
+            conversation: [
+                {
+                    speaker: 1,
+                    text: "I am merely a demo to easily show the format."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Wow I wish I was you!"
+                },
+            ]
+        },
+
         template: {
             conversation: [
                 {
