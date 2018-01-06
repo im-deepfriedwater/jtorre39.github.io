@@ -10,9 +10,9 @@
         intro: {
             conversation: [{
                     speaker: 2,
-                    text: "As you get ready to leave, you feel a "
-                        + "slight disturbance staring at you from the side."
-                        + "*Click to Continue*"
+                    text: "As you get ready to leave, you feel a " +
+                        "slight disturbance staring at you from the side." +
+                        "*Click to Continue*"
                 },
 
                 {
@@ -39,8 +39,8 @@
 
                 {
                     speaker: 1,
-                    text: "Yes. But I'm sure this can be handled by someone "
-                        + "else. Here take my coworker's business card an-"
+                    text: "Yes. But I'm sure this can be handled by someone " +
+                        "else. Here take my coworker's business card an-"
                 },
 
                 {
@@ -70,14 +70,14 @@
 
                 {
                     speaker: 0,
-                    text: "I'm a Junior pursuing a degree in Computer Science at "
-                           + "Loyola Marymount University."
+                    text: "I'm a Junior pursuing a degree in Computer Science at " +
+                           "Loyola Marymount University."
                 },
 
                 {
                     speaker: 0,
-                    text: "I believe I'd be an excellent candidate for your "
-                            + "software engineering internship position."
+                    text: "I believe I'd be an excellent candidate for your " +
+                            "software engineering internship position."
                 },
 
                 {
@@ -87,8 +87,8 @@
 
                 {
                     speaker: 2,
-                    text: "Suddenly, you see a screen appear before you! \n"
-                        + "*Click here to continue*",
+                    text: "Suddenly, you see a screen appear before you! \n" +
+                        "*Click here to continue*",
                     trigger: "portfolio-spawn"
                 },
 
@@ -114,15 +114,15 @@
 
                 {
                     speaker: 0,
-                    text: "Written using JavaScript and jQuery, "
-                        + "it is meant for devices with touch and accelormeters."
+                    text: "Written using JavaScript and jQuery, " +
+                        "it is meant for devices with touch and accelormeters."
                 },
 
                 {
                     speaker: 0,
-                    text: "It lets you draw walls and "
-                        + "tilt the device to control the balls. Walls can be "
-                        + "moved after being placed."
+                    text: "It lets you draw walls and " +
+                        "tilt the device to control the balls. Walls can be " +
+                        "moved after being placed."
 
                 },
 
@@ -135,9 +135,9 @@
 
                 {
                     speaker: 0,
-                    text: "The purpose of this project was to work with "
-                        + "a direct manipulation sort of UI. It was a great "
-                        +"interacion design exercise."
+                    text: "The purpose of this project was to work with " +
+                        "a direct manipulation sort of UI. It was a great " +
+                        "interacion design exercise."
                 },
 
                 {
@@ -159,18 +159,16 @@
 
                 {
                     speaker: 2,
-                    text: "You consider trying the app. You build excellent "
-                        + "mazes you suspect. If not, click to continue."
+                    text: "You consider trying the app. You build excellent " +
+                        "mazes you suspect. If not, click to continue."
                 },
 
                 {
                     speaker: 1,
-                    text: "Alright, it would take too long for the masses to solve my "
-                        + "mazes. Let's move on.",
+                    text: "Alright, it would take too long for the masses to solve my " +
+                        "mazes. Let's move on.",
                     trigger: "end"
                 },
-
-
             ]
         },
 
@@ -178,19 +176,19 @@
             conversation: [
                 {
                     speaker: 1,
-                    text: `Tell me about your "GRNmap Research" and your role on it.`
+                    text: 'Tell me about your "GRNmap Research" and your role on it.'
                 },
 
                 {
                     speaker: 0,
-                    text: "GRNmap is a software package written in MATLAB meant "
-                        + "for modeling the dynamics of GRNs."
+                    text: "GRNmap is a software package written in MATLAB meant " +
+                        "for modeling the dynamics of GRNs."
                 },
 
                 {
                     speaker: 0,
-                    text: "It is a research project I work on at university."
-                        + "I've been on it for about a year and a half."
+                    text: "It is a research project I work on at university. " +
+                        "I've been on it for about a year and a half."
                 },
 
                 {
@@ -200,26 +198,26 @@
 
                 {
                     speaker: 0,
-                    text: "GRN stands for gene regulatory network, and it "
-                        + "describes gene expressions over time."
+                    text: "GRN stands for gene regulatory network, and it " +
+                        "describes gene expressions over time."
                 },
 
                 {
                     speaker: 1,
-                    text: "Genes bring me back to high school biology. This sounds "
-                        + "like a complicated project."
+                    text: "Genes bring me back to high school biology. This sounds " +
+                        "like a complicated project."
                 },
 
                 {
                     speaker: 0,
-                    text: "We collaborate with professors "
-                        + "across three different disciplines to work on this project."
+                    text: "We collaborate with professors " +
+                        "across three different disciplines to work on this project."
                 },
 
                 {
                     speaker: 0,
-                    text: "The icon up there is GRNsight's, a sister project. "
-                        + "They work on visualization using GRNmap's output."
+                    text: "The icon up there is GRNsight's, a sister project. " +
+                        "They work on visualization using GRNmap's output."
                 },
 
                 {
@@ -229,27 +227,27 @@
 
                 {
                     speaker: 0,
-                    text: "Yes! That's right. There's a lot of communication and "
-                        + "cross-discipline work that happens here."
-                }
-
-
-                {
-                    speaker: 0,
-                    text: "My role is not unlike that of a software engineer. I come in "
-                        + "for weekly meetings, then I work on the tasks for the week."
+                    text: "Yes! That's right. There's a lot of communication and " +
+                        "cross-discipline work that happens here."
                 },
 
                 {
                     speaker: 0,
-                    text: "My time on the project has encompassed a code refactorization, "
-                        + "updating an integral data structure to account for missing values, "
+                    text: "My role is not unlike that of a software engineer. I come in " +
+                        "for weekly meetings, then I work on the tasks for the week."
                 },
 
                 {
                     speaker: 0,
-                    text: "implemented new features, fixed bugs, all the while maintaining "
-                        + "and improving the test suite. I'm still currently on this project."
+                    text: "My time on the project has encompassed a code refactorization, " +
+                        "updating an integral data structure to account for missing values, "
+                },
+
+
+                {
+                    speaker: 0,
+                    text: "implemented new features, fixed bugs, all the while maintaining " +
+                        "and improving the existing test suite."
                 },
 
                 {
@@ -259,15 +257,15 @@
 
                 {
                     speaker: 0,
-                    text: "I'm a firm believer that for a computer scientist, "
-                        + "programming languages are but a tool in our tool box."
+                    text: "I'm a firm believer that for a computer scientist, " +
+                        "programming languages are but a tool in our tool box."
                 },
 
                 {
                     speaker: 0,
-                    text: "General concepts and paradigms are across all programming "
-                        + "languages. The experience I have while working on GRNmap "
-                        + "transfers to any other software engineering. "
+                    text: "General concepts and paradigms are across all programming " +
+                        "languages. The experience I have while working on GRNmap " +
+                        "transfers to any other software engineering. "
                 },
 
                 {
@@ -278,8 +276,8 @@
                 {
                     speaker: 0,
                     text: "I recently presented a poster on this project at " +
-                       + "an academic conference known as SCCUR 2017. You can also " +
-                       + "view the website and GitHub up above!",
+                       "an academic conference known as SCCUR 2017. You can also " +
+                       "view the website and GitHub up above!",
 
                     trigger: "spawn-links",
                     links: [
@@ -295,8 +293,6 @@
                         }
                     ]
                 },
-
-
             ]
         },
 
@@ -304,12 +300,48 @@
             conversation: [
                 {
                     speaker: 1,
-                    text: `What's this "Maze Builder Web App?"`
+                    text: "Could you speak about... pluv-io?"
                 },
 
                 {
                     speaker: 0,
-                    text: `What's this "Maze Builder Web App?"`
+                    text: "It's short for pluviophile which describes someone " +
+                        "who loves rain! It's the next project I plan to work on."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Pluvio is an ambient rain noise mobile app for Android! " +
+                        "It will be written using C# and the Xamarin framework."
+                },
+
+                {
+                    speaker: 1,
+                    text: "There has to be a couple of ambient rain noise apps " +
+                        "on the market. What makes Pluvio different?"
+                },
+
+                {
+                    speaker: 0,
+                    text: "From experience there's a few features missing from " +
+                        "those. I decided to take matters into my own hands."
+                },
+
+                {
+                    speaker: 0,
+                    text: "It will also be a great learning experience for me to work " +
+                        "with the Xamarin framework for the first time."
+                },
+
+                {
+                    speaker: 0,
+                    text: "I hope to have something to show for it sometime soon!"
+                },
+
+                {
+                    speaker: 1,
+                    text: "Maybe I'll check it out when you're done with it.",
+                    trigger: "end"
                 },
             ]
         },
@@ -318,12 +350,68 @@
             conversation: [
                 {
                     speaker: 1,
-                    text: `What's this "Maze Builder Web App?"`
+                    text: "Speak to me about this portfolio you've made in front " +
+                        "of me."
                 },
 
                 {
                     speaker: 0,
-                    text: `What's this "Maze Builder Web App?"`
+                    text: "A friend of mine convinced me to buy the domain for my " +
+                        "name. I would work on a website for it every once in a while."
+                },
+
+                {
+                    speaker: 0,
+                    text: "But I kept hitting a wall. I had a generic design that " +
+                        "wasn't particularly inspiring or unique."
+                },
+
+                {
+                    speaker: 0,
+                    text: "So I committed my next break to working on a website " +
+                        "that accurately captured me."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Over a two week break from school, I wrote this website " +
+                        "using JavaScript, jQuery, HTML, and CSS. "
+                },
+
+                {
+                    speaker: 0,
+                    text: "Video games are a big part of my life, so I decided " +
+                        "to encompass that literally in my website portfolio."
+                },
+
+                {
+                    speaker: 2,
+                    text: "You have a brief moment of existentialism."
+                },
+
+                {
+                    speaker: 2,
+                    text: " You wonder what if you were merely nothing but a " +
+                        "component in some student's website portfolio."
+                },
+
+                {
+                    speaker: 1,
+                    text: "(... There's no way. I'm such a great recruiter. It's" +
+                        "impossible to capture that in some interactive portfolio.)"
+                },
+
+                {
+                    speaker: 0,
+                    text: "H-hey you seem to have spaced out. You can view the Github " +
+                        "repository for this website at the link above!",
+                    trigger: "spawn-links",
+                    links: [
+                        {
+                            title: "Github Repository",
+                            src: "https://github.com/jtorre39/jtorre39.github.io"
+                        },
+                    ]
                 },
             ]
         },
@@ -337,7 +425,58 @@
 
                 {
                     speaker: 0,
-                    text: `Never thought you'd ask!`,
+                    text: "Yeah sure! Well first I grew up on video games. Video games even " +
+                        "led me to start studying computer science."
+                },
+
+                {
+                    speaker: 0,
+                    text: "A few years later, I've come out with a passion for " +
+                        "computer science I wasn't expecting to have."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Along the way I've had experiences that fostered " +
+                        "a strong sense of collaboration and communication in me."
+                },
+
+                {
+                    speaker: 0,
+                    text: "The opportunity to create something in this day and age " +
+                        "with a team of other creative and passionate people- "
+                },
+
+                {
+                    speaker: 0,
+                    text: "That is something I savor and hope to have in my career."
+                },
+
+                {
+                    speaker: 1,
+                    text: "Is your career interest making video games?"
+                },
+
+                {
+                    speaker: 0,
+                    text: "Oh I would love to work on a video game."
+                },
+
+                {
+                    speaker: 0,
+                    text: "But I've realized software engineering would be just as "
+                        + "challenging and rewarding to do as well. "
+                },
+
+                {
+                    speaker: 0,
+                    text: "I'm heavily interested in either software engineering or " +
+                        "working in video games."
+                },
+
+                {
+                    speaker: 1,
+                    text: "Alright, nice to get to know you a little better.",
                     trigger: "end"
                 },
             ]
@@ -366,20 +505,20 @@
 
                 {
                     speaker: 0,
-                    text: "That was a project meant to determine the in-between "
-                        + "frames of an animation when given only the key frames."
+                    text: "That was a project meant to determine the in-between " +
+                        "frames of an animation when given only the key frames."
                 },
 
                 {
                     speaker: 0,
-                    text: "It was coded purely in JavaScript. It allows users to "
-                        + "write and create animations entirely in JavaScript!"
+                    text: "It was coded purely in JavaScript. It allows users to " +
+                        "write and create animations entirely in JavaScript!"
                 },
 
                 {
                     speaker: 0,
-                    text: "You merely need to give it a JSON file that contains "
-                        + "a list of keyframes. It does everything else for you."
+                    text: "You merely need to give it a JSON file that contains " +
+                        "a list of keyframes. It does everything else for you."
 
                 },
 
@@ -391,9 +530,9 @@
 
                 {
                     speaker: 0,
-                    text: "I believe the art can speak for itself! You can "
-                        + "check out a demo animation I made using the link "
-                        + "right there.",
+                    text: "I believe the art can speak for itself! You can " +
+                        "check out a demo animation I made using the link " +
+                        "right there.",
                     trigger: "spawn-links",
                     links: [
                         {
@@ -405,8 +544,8 @@
 
                 {
                     speaker: 2,
-                    text: "Maybe I should check out the links to see what "
-                        + "the kid is talking about. If not, *click to continue*",
+                    text: "Maybe I should check out the links to see what " +
+                        "the kid is talking about. If not, *click to continue*",
                 },
 
                 {
@@ -426,8 +565,8 @@
 
                 {
                     speaker: 0,
-                    text: "Oh, there's nothing here. Click up in that fancy "
-                    + "box I made."
+                    text: "Oh, there's nothing here. Click up in that fancy " +
+                        "box I made."
                 },
 
                 {
@@ -437,8 +576,8 @@
 
                 {
                     speaker: 0,
-                    text: "Ahh... haha... there's a fancy screen with your "
-                        + "clicking device's name on it! Please?"
+                    text: "Ahh... haha... there's a fancy screen with your " +
+                        "clicking device's name on it! Please?"
                 },
 
                 {
@@ -448,26 +587,26 @@
 
                 {
                     speaker: 0,
-                    text: "(Hmm, this is going as bad as I thought it would. "
-                        + "I should've rehearsed a few more times.) "
+                    text: "(Hmm, this is going as bad as I thought it would. " +
+                        "I should've rehearsed a few more times.) "
                 },
 
                 {
                     speaker: 0,
-                    text: "Did you need help deciding what to click? "
-                        + "Maybe that small turtle. It has tons to show you. "
+                    text: "Did you need help deciding what to click? " +
+                        "Maybe that small turtle. It has tons to show you. "
                 },
 
                 {
                     speaker: 0,
-                    text: "(Is... this just a thing? Is this some sort of recruiter "
-                        + "tactic?)"
+                    text: "(Is... this just a thing? Is this some sort of recruiter " +
+                        "tactic?)"
                 },
 
                 {
                     speaker: 0,
-                    text: "Wowowow you're probably super close to an achievement with "
-                        + "how much you've clicked down here!"
+                    text: "Wowowow you're probably super close to an achievement with " +
+                        "how much you've clicked down here!"
                 },
 
                 {
@@ -479,29 +618,29 @@
 
                 {
                     speaker: 0,
-                    text: "Your reward is the ability to click anything above in the "
-                        + "portfolio! You seemingly lacked this ability before!"
+                    text: "Your reward is the ability to click anything above in the " +
+                        "portfolio! You must've lacked this ability before!"
 
                 },
 
                 {
                     speaker: 0,
-                    text: "You excitedly try out your newfound ability and click "
-                        + "one of the projects above! Like the turtle one."
+                    text: "You excitedly try out your newfound ability and click " +
+                        "one of the projects above! Like the turtle one."
                 },
 
                 {
                     speaker: 0,
-                    text: "Ahaha... I've run out of things to say. "
-                        + "I would love to talk more but it would waste this fancy "
-                        + "portfolio."
+                    text: "Ahaha... I've run out of things to say. " +
+                        "I would love to talk more but it would waste this fancy " +
+                        "portfolio."
 
                 },
 
                 {
                     speaker: 0,
-                    text: "Well, if they don't know what you're saying, run it "
-                        + "one more time! I think I can repeat everything I've just said.",
+                    text: "Well, if they don't know what you're saying, run back " +
+                        "one more time! I think I can repeat everything I've just said."
                 },
 
                 {
@@ -510,7 +649,21 @@
                     trigger: "repeat"
                 },
             ]
-        }
+        },
+
+        template: {
+            conversation: [
+                {
+                    speaker: 1,
+                    text: "I am merely a demo to easily show the format."
+                },
+
+                {
+                    speaker: 0,
+                    text: "Wow I wish I was you!"
+                },
+            ]
+        },
     };
 
     const getConversation = (key, index) => {

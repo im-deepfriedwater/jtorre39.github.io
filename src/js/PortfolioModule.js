@@ -19,9 +19,23 @@
         },
 
         {
-            title: "GRNmap Research",
+            title: "GRNmap",
             key: "grnmap",
-            img: "images/grnmap.png"
+            img: "images/grnmap.png",
+            lineBreak: "Research",
+        },
+
+        {
+            title: "Website Portfolio",
+            key: "website",
+            img: "images/self_inclusion.png"
+        },
+
+        {
+            title: "Pluvio",
+            key: "pluvio",
+            img: "images/pluvio.png",
+            lineBreak: "App",
         },
     ];
     const getPortfolio = () => portfolio;

@@ -188,10 +188,16 @@
                        <img class="topic-icon" src="${topic.img}">
                    </div>
                    <div class="topic-placard lvl1">
-                        <p>${topic.title}</p>
+                        <p>
+                            ${topic.title} ${linkBreakIfNecessary(topic)}
+                        </p>
                    </div>
                </div> \n`;
-    }
+    };
+
+    const linkBreakIfNecessary = (topic) => {
+        return topic.lineBreak ? "<br />" + topic.lineBreak : "";
+    };
 
     const spawnPortfolio = () => {
         $topicContainer.addClass(activeClass);
