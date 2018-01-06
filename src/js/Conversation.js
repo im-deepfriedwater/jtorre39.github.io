@@ -55,7 +55,7 @@
 
                 {
                     speaker: 2,
-                    text: "You feel your ego appeased."
+                    text: "(+ 5 to your ego.)"
                 },
 
                 {
@@ -783,7 +783,6 @@
                     speaker: 0,
                     text: "Your reward is the ability to click anything above in the " +
                         "portfolio! You must've lacked this ability before!"
-
                 },
 
                 {
