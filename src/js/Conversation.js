@@ -1,5 +1,31 @@
 (() => {
 
+
+    const getEducationStatus = () => {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = today.getMonth() + 1; //january starts at 0
+        const expectedGraduation = 2019;
+
+        const graduatePrefix = "I recently graduated in 2019 with a ";
+        const resultSuffix = " Bachelor's degree in computer science at " +
+            "Loyola Marymount University.";
+
+        const underGraduateString =  (year) => "I'm a " + year + " pursuing a ";
+
+        let result = "";
+
+        if (year < expectedGraduation) {
+            result = month > 5 ? underGraduateString("Senior") : underGraduateString("Junior");
+        } else if (year === expectedGraduation){
+            result = month > 5 ? graduatePrefix : underGraduateString("Senior");
+        } else {
+            result = graduatePrefix;
+        }
+
+        return result + resultSuffix
+    };
+
     // Speaker Key
     // 3 = ???
     // 2 = narrator
@@ -70,8 +96,7 @@
 
                 {
                     speaker: 0,
-                    text: "I'm a Junior pursuing a Bachelor's degree in Computer Science at " +
-                           "Loyola Marymount University."
+                    text: getEducationStatus()
                 },
 
                 {
@@ -1042,6 +1067,7 @@
     const getConversation = (key, index) => {
         return ConversationDatabase[key].conversation[index];
     };
+
 
     window.Conversation = { getConversation };
 })();
