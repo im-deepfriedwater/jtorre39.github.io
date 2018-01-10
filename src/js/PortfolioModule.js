@@ -1,9 +1,10 @@
 (() => {
     const portfolio = [
         {
-            title: "Keyframe Tweener",
+            title: "Keyframe",
             key: "tweener",
-            img: "images/smol.png"
+            img: "images/smol.png",
+            lineBreak: "Tweener"
         },
 
         {

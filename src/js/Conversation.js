@@ -888,7 +888,7 @@
                     links: [
                         {
                             title: "Resume",
-                            src: "https://www.dropbox.com/s/qlr66tlkt7zctsq/Justin%20Kyle%20Torres%20Resume.pdf?dl=0"
+                            src: "https://www.dropbox.com/s/lhkkk0yh61cfrqa/Justin%20Kyle%20Torres%20Resume.pdf?dl=0"
                         }
                     ]
                 },
