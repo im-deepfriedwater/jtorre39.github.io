@@ -129,7 +129,6 @@
     const convoFunctionGenerator = (key) => {
         return function () {
             $(this).addClass("read-topic");
-            console.log($(this))
             proceed(key);
         };
     };
@@ -164,7 +163,7 @@
     const generateLinkHTML = (link) => {
         return `<div class="topic-row">
             <div class="lvl1 topic">
-                <a href="${link.src}" class="portfolio-link" target="_blank">
+                <a class="topic-link" href="${link.src}" class="portfolio-link" target="_blank">
                     ${link.title}
                </a>
             </div>

@@ -113,5 +113,10 @@
     text-decoration: none;
     font-family: 'Press Start 2P';
     text-align: center;
+}
 
+.topic-link {
+    display: inline-block;
+    width: 100%;
+    font-family: 'Press Start 2P';
 }

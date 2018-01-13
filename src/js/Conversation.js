@@ -460,7 +460,7 @@
 
                 {
                     speaker: 0,
-                    text: "You can view the GitHub repository and also I blog " +
+                    text: "You can view the GitHub repository and also a blog " +
                         "I wrote about the making of this site at the links above!",
                     trigger: "spawn-links",
                     links: [
