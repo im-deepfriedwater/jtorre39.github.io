@@ -82,11 +82,11 @@
         formatText(options);
 
         $externalContainer.append(
-            $(`<div class="${optionClass} no-select">On</div>`)
+            $(`<div class="${optionClass} no-select">On *Recommended*</div>`)
                 .click(finishIntroOn)
             ,
 
-            $(`<div class="${optionClass} no-select">Off</div>`)
+            $(`<div class="${optionClass} no-select">Off *Not as Recommended*</div>`)
                 .click(finishIntroOff)
         );
     };
