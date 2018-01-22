@@ -86,7 +86,7 @@
                 .click(finishIntroOn)
             ,
 
-            $(`<div class="${optionClass} no-select">Off *Not as Recommended*</div>`)
+            $(`<div class="${optionClass} no-select">Off</div>`)
                 .click(finishIntroOff)
         );
     };
