@@ -847,8 +847,50 @@
 
                 {
                     speaker: 0,
+                    text: "I currently work as a Computer Science Teaching Assistant " +
+                        "at Loyola Marymount University."
+                },
+
+                {
+                    speaker: 0,
+                    text: "I started in January 2018 and my duties involve anwering " +
+                        "any questions students have regarding computer science."
+                },
+
+                {
+                    speaker: 0,
+                    text: "This requires me to have a strong and fundamental " +
+                        "understanding of various subjects such as: "
+
+                },
+
+                {
+                    speaker: 0,
+                    text: "programming, data structures, algorithms, and web development."
+                },
+
+                {
+                    speaker: 0,
+                    text: "I come equipped with listening and problem-solving skills " +
+                        "to tackle any questions that are asked."
+                },
+
+                {
+                    speaker: 1,
+                    text: "Any other previous work experiences?"
+                },
+
+                {
+                    speaker: 0,
                     text: "I worked at the school library as an ITS Helpdesk Technician" +
-                        "for about two years."
+                        "from September 2015 to July 2017."
+                },
+
+
+                {
+                    speaker: 0,
+                    text: "My responsibility was to assist patrons with any " +
+                        "technical question or issue they might have."
                 },
 
                 {
@@ -857,33 +899,10 @@
                         "and problem-solving with patrons."
                 },
 
-                {
-                    speaker: 0,
-                    text: "I did end up leaving the job however to focus on getting my "
-                        + "grades back up, which did end up happening."
-                },
 
                 {
                     speaker: 0,
-                    text: "This upcoming semester I'll be a lab teacher's assistant " +
-                        "at Loyola Marymount University."
-                },
-
-                {
-                    speaker: 0,
-                    text: "I'll be getting paid to help students with any questions " +
-                        "they have regarding computer science homework."
-                },
-
-                {
-                    speaker: 0,
-                    text: "It truthfully is something I'm very thankful and excited "
-                        + "for."
-                },
-
-                {
-                    speaker: 0,
-                    text: "You can see more about my work experiences on my resume!",
+                    text: "You can see more about my work experience and projects on my resume!",
                     trigger: "spawn-links",
                     links: [
                         {
