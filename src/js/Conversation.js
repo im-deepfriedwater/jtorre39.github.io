@@ -1,7 +1,7 @@
 (() => {
 
 
-    const getEducationStatus = () => {
+    const generateEducationStatus = () => {
         const today = new Date();
         const year = today.getFullYear();
         const month = today.getMonth() + 1; //january starts at 0
@@ -96,13 +96,13 @@
 
                 {
                     speaker: 0,
-                    text: getEducationStatus()
+                    text: generateEducationStatus()
                 },
 
                 {
                     speaker: 0,
                     text: "I believe I'd be an excellent candidate for your " +
-                            "software engineering internship position."
+                            "software engineering position."
                 },
 
                 {
@@ -847,8 +847,26 @@
 
                 {
                     speaker: 0,
+                    text: "I just finished a software engineering internship " +
+                        "at STRIVR, a company specializing in VR training"
+                },
+
+                {
+                    speaker: 0,
+                    text: "It was an amazing opportunity to contribute " +
+                        "production code to STRIVR's training software and "
+                },
+
+                {
+                    speaker: 0,
+                    text: "their data pipeline. All the meanwhile learning " +
+                        "to work as a fully-fledged software engineer."
+                },
+
+                {
+                    speaker: 0,
                     text: "I currently work as a Computer Science Teaching Assistant " +
-                        "at Loyola Marymount University."
+                        "at Loyola Marymount University at school."
                 },
 
                 {
@@ -907,7 +925,7 @@
                     links: [
                         {
                             title: "Resume",
-                            src: "https://www.dropbox.com/s/lhkkk0yh61cfrqa/Justin%20Kyle%20Torres%20Resume.pdf?dl=0"
+                            src: "https://www.dropbox.com/s/kjwfxkzabyvg4o3/Justin%20Kyle%20Torres%20Resume.docx?dl=0"
                         }
                     ]
                 },
