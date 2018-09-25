@@ -38,7 +38,6 @@
 
     const Init = () => {
         playSound($("#bg"), 0.07);
-        // Unsure how to audio loop easily using jQuery.
         document.getElementById("bg").loop = true;
         setupTextBox();
         slideUp();
@@ -84,7 +83,7 @@
         index = convo.end ? index : index + 1;
     };
 
-    // For use when there is a topic which has no special events
+    // For use when there is a topic which has no special events.
     const dialogueFunctionGenerator = (key) => {
         let index = 0;
 
